@@ -3,6 +3,8 @@ class BookingsController < ApplicationController
   def new
   end
 
-  def crate
+  def create
+    
+  end
 
 end
