@@ -1,0 +1,224 @@
+h1 {
+  text-align: center;
+  font-family: 'Roboto', sans serif;
+  font-weight: lighter;
+}
+
+.first-section {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 50px;
+  // border: 1px solid black;
+}
+
+/*avatar customization starts*/
+//
+.avatar-container {
+  //border: 1px solid black;
+  width: 300px;
+  height: 300px;
+  position: relative;
+  display: flex;
+}
+
+.avatar-green-background {
+  background-color: #869D74;
+  width: 250px;
+  height: 250px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: 0;
+}
+
+.avatar-name {
+  color: white;
+  z-index: 2;
+  position: absolute;
+  bottom: 0;
+  right: 50%;
+}
+
+.avatar-square {
+  z-index: 1;
+  width: 250px;
+  height: 250px;
+}
+
+/*avatar customization ends*/
+
+
+/*services-card customization starts*/
+
+.services-container {
+  // border: 1px solid black;
+  width: 500px;
+  height: 250px;
+}
+
+.services-card-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.services-card {
+  margin: 10px;
+  width: 400px;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 10px 10px 5px 0px rgba(0,0,0, 0.2);
+  background-color: white;
+}
+
+.book-button {
+  border-radius: 20px;
+  width: 70px;
+  height: 30px;
+  align-self: center;
+  margin-right: 5px;
+  box-shadow: 10px 10px 5px 0px rgba(0,0,0, 0.2);
+  background-color: #006A52;
+  color: white;
+  text-align: center;
+}
+
+
+.services-card .service-name {
+  // border: 1px solid black;
+  margin: 5px;
+  width: 300px;
+  height: 30px;
+  align-self: center;
+  color: #548D2D;
+}
+
+.services-card .service-category {
+  //border: 1px solid black;
+  margin: 5px;
+  width: 150px;
+  height: 30px;
+  align-self: center;
+  color: lightgrey;
+  text-align: right;
+}
+
+/*services-card customization ends*/
+
+.second-section {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 50px;
+  //border: 1px solid black;
+}
+
+.contact-container {
+  //border: 1px solid black;
+  width: 300px;
+  height: 250px;
+  box-shadow: 10px 10px 5px 0px rgba(0,0,0, 0.2);
+  background-color: white;
+  border-radius: 20px;
+  text-align: center;
+}
+
+.contact-info {
+  //border: 1px solid black;
+  width: 100%;
+  height: 75%;
+  background-color: rgba(134,157,116, 0.4);
+  text-align: left;
+  padding: 10px;
+}
+
+.booking-container {
+  //border: 1px solid black;
+  width: 600px;
+  height: 250px;
+  box-shadow: 10px 10px 5px 0px rgba(0,0,0, 0.2);
+  background-color: white;
+}
+
+.booking-header {
+  //border: 1px solid black;
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+  background-color: lightgrey;
+}
+
+.booking-header .booking-skill {
+  //border: 1px solid black;
+  width: 150px;
+  height: 30px;
+  align-self: center;
+}
+
+.booking-header .booking-name {
+  //border: 1px solid black;
+  width: 150px;
+  height: 30px;
+  align-self: center;
+
+}
+
+.booking-header .booking-date {
+  //border: 1px solid black;
+  width: 150px;
+  height: 30px;
+  align-self: center;
+}
+
+.booking-content {
+  //border: 1px solid black;
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+  border-bottom: 1px solid lightgrey;
+}
+
+.booking-content .booking-skill {
+  //border: 1px solid black;
+  width: 150px;
+  height: 30px;
+  align-self: center;
+}
+
+.booking-content .booking-name {
+  //border: 1px solid black;
+  width: 150px;
+  height: 30px;
+  align-self: center;
+
+}
+
+.booking-content .booking-date {
+  //border: 1px solid black;
+  width: 150px;
+  height: 30px;
+  align-self: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
