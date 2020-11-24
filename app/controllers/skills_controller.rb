@@ -9,7 +9,7 @@ class SkillsController < ApplicationController
   end
 
   def show
-    @skill = Skill.find(params[:id])
+    # @skill = Skill.find(params[:id])
   end
 
 
