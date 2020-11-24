@@ -5,19 +5,32 @@ class SkillPolicy < ApplicationPolicy
     end
   end
 
-  def new?
-    true
-  end
+  # def new?
+  #   true
+  # end
 
   def create?
     true
   end
 
+  def show?
+    true
+  end
+
+  # def edit?
+  #   user == record.user
+  # end
+
   def update?
-    record.user == user
+    user_is_owner_or_admin?
   end
 
   def destroy?
-    record.user == user
+    user_is_owner_or_admin?
   end
+
+  private
+    def user_is_owner_or_admin?
+      user == record.user || user.admin
+    end
 end
