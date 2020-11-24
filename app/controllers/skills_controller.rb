@@ -1,12 +1,11 @@
 class SkillsController < ApplicationController
 
   def home
-    #Welcome page
   end
 
   def index
     @skills = Skill.all
-    @skill = Skill.find(params[:tag_id])
+    # @skill = Skill.find(params[:tag_id])
   end
 
   def show
