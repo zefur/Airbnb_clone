@@ -39,11 +39,11 @@ class SkillsController < ApplicationController
   
   #PATCH,PUT  /skills/:id
   def update
-    if @skill.update(skill_params)
-      redirect_to @skill, notice 'Successfully updated'
-    else
-      render :edit
-    end
+    # if @skill.update(skill_params)
+    #   redirect_to @skill, notice 'Successfully updated'
+    # else
+    #   render :edit
+    # end
   end
 
   #DELETE /skills/:id
