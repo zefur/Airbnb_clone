@@ -3,7 +3,7 @@ class SkillsController < ApplicationController
 
   def home
   end
-  
+
   #GET /skills
   def index
     @skills = Skill.all
@@ -29,14 +29,14 @@ class SkillsController < ApplicationController
     @skill = Skill.new(skill_params)
     @skill.user = current_user
     authorize @skill
-    
+
     # if @skill.save
     #   redirect_to @skill, notice 'Skill was successfully create.'
     # else
     #   render :new
     # end
   end
-  
+
   #PATCH,PUT  /skills/:id
   def update
     # if @skill.update(skill_params)
@@ -55,7 +55,7 @@ class SkillsController < ApplicationController
   private
 
   def set_skill
-    @skill = Skill.find([:id])
+    @skill = Skill.find(params[:id])
     authorize @skill
   end
 
