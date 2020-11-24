@@ -7,7 +7,11 @@ before_action :set_default
   def create
     @booking = Booking.new(bookings_params)
     @user_id = current_user.id
-    if
+    if @booking.save?
+      puts "its done"
+    else
+      puts "something went wrong"
+    end
 
   end
 
