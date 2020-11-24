@@ -1,1 +1,36 @@
-// Specific CSS for your home-page
+.container {
+margin: 0;
+padding: 0;
+}
+
+
+.banner-content {
+  text-align: left;
+}
+
+
+.left-container {
+align-items: center;
+
+}
+
+.navigation-bar {
+margin: 0;
+padding: 0;
+display: flex;
+justify-content: center;
+align-items: center;
+width: 100%;
+background-color: white;
+
+}
+
+.navigation-bar-icons {
+margin: 0;
+padding: 0;
+display: flex;
+justify-content: center;
+align-items: center;
+
+}
+
