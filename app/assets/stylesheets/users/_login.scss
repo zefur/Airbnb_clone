@@ -1,0 +1,39 @@
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.login-form {
+ 
+  display: flex;
+  width: 472px;
+  height: 569px;
+  flex-direction: column;
+  background-color: rgba(15, 48, 87, 0.8);
+  border-radius: 10px;
+  color: white; 
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+.input {
+ 
+  width: 379px;
+  height: 91px;
+  margin-top: 40px;
+  
+
+}
+.center {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  
+}
+.column {
+  flex-direction: column;
+}
