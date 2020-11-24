@@ -2,17 +2,18 @@ class SkillsController < ApplicationController
 
   def home
   end
-
-  def def new
-    @skill = Skill.new
-  end
   
-
+  #GET /skills
   def index
     @skills = Skill.all
     # @skill = Skill.find(params[:tag_id])
   end
-
+  #GET /skills/new
+  def new
+    @skill = Skill.new
+    authorize @skill
+  end
+  #GET /skills/:id
   def show
     @skill = Skill.find(params[:id])
   end
@@ -22,6 +23,7 @@ class SkillsController < ApplicationController
 
   def create
     @skill = Skill.new(skill_params)
+    @skill.user = current_user
 
     if @skill.save
       redirect_to @skill, notice 'Skill was successfully create.'
