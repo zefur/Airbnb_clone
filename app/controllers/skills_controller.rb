@@ -30,11 +30,11 @@ class SkillsController < ApplicationController
     @skill.user = current_user
     authorize @skill
     
-    if @skill.save
-      redirect_to @skill, notice 'Skill was successfully create.'
-    else
-      render :new
-    end
+    # if @skill.save
+    #   redirect_to @skill, notice 'Skill was successfully create.'
+    # else
+    #   render :new
+    # end
   end
   
   #PATCH,PUT  /skills/:id
