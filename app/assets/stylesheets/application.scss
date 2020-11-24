@@ -11,3 +11,59 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+
+
+#background{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1000;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    
+    background-size: cover;
+  }
+
+
+  .container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  }
+
+
+.login-form {
+   
+    display: flex;
+    width: 472px;
+    height: 569px;
+    flex-direction: column;
+    background-color: rgba(15, 48, 87, 0.8);
+    border-radius: 10px;
+    color: white; 
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.input {
+   
+    width: 379px;
+    height: 91px;
+    margin-top: 40px;
+    
+
+}
+.center {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    
+}
+.column {
+    flex-direction: column;
+}
