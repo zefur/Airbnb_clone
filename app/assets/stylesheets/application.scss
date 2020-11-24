@@ -12,6 +12,7 @@
 @import "components/index";
 @import "pages/index";
 @import "users/index";
+@import "devise/registrations/index";
 
 
 
@@ -27,6 +28,7 @@
     width: auto;
     height: auto;
     z-index: -1000;
+    margin:0;
     -webkit-transform: translateX(-50%) translateY(-50%);
     transform: translateX(-50%) translateY(-50%);
     background-size: cover;
