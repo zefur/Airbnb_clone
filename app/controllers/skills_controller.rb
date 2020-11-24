@@ -4,7 +4,7 @@ class SkillsController < ApplicationController
   end
 
   def index
-    @skills = Skill.all
+    @skills = params[:skill_type] ? Skill.filter(params[:skill_type]) : @skills = Skill.all
     # @skill = Skill.find(params[:tag_id])
   end
 
@@ -12,5 +12,10 @@ class SkillsController < ApplicationController
     @skill = Skill.find(params[:id])
   end
 
+  private
+
+  def skills_params
+    params.require(:skill).permit(:skill_type)
+  end
 
 end
