@@ -14,7 +14,7 @@ h1 {
 /*avatar customization starts*/
 //
 .avatar-container {
-  //border: 1px solid black;
+  border: 1px solid black;
   width: 300px;
   height: 300px;
   position: relative;
@@ -29,6 +29,14 @@ h1 {
   bottom: 0;
   right: 0;
   z-index: 0;
+}
+
+.avatar-name {
+  color: white;
+  z-index: 2;
+  position: absolute;
+  bottom: 0;
+  right: 50%;
 }
 
 .avatar-square {
@@ -110,6 +118,15 @@ h1 {
   height: 250px;
   box-shadow: 10px 10px 5px 0px rgba(0,0,0, 0.2);
   background-color: white;
+  border-radius: 20px;
+  text-align: center;
+}
+
+.contact-info {
+  //border: 1px solid black;
+  width: 100%;
+  height: 75%;
+  background-color: rgba(134,157,116, 0.4);
 }
 
 .booking-container {
@@ -120,7 +137,65 @@ h1 {
   background-color: white;
 }
 
+.booking-header {
+  //border: 1px solid black;
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+  background-color: lightgrey;
+}
 
+.booking-header .booking-skill {
+  //border: 1px solid black;
+  width: 150px;
+  height: 30px;
+  align-self: center;
+}
+
+.booking-header .booking-name {
+  //border: 1px solid black;
+  width: 150px;
+  height: 30px;
+  align-self: center;
+
+}
+
+.booking-header .booking-date {
+  //border: 1px solid black;
+  width: 150px;
+  height: 30px;
+  align-self: center;
+}
+
+.booking-content {
+  //border: 1px solid black;
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+  border-bottom: 1px solid lightgrey;
+}
+
+.booking-content .booking-skill {
+  //border: 1px solid black;
+  width: 150px;
+  height: 30px;
+  align-self: center;
+}
+
+.booking-content .booking-name {
+  //border: 1px solid black;
+  width: 150px;
+  height: 30px;
+  align-self: center;
+
+}
+
+.booking-content .booking-date {
+  //border: 1px solid black;
+  width: 150px;
+  height: 30px;
+  align-self: center;
+}
 
 
 
