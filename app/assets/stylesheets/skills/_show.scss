@@ -1,0 +1,269 @@
+h1 {
+  text-align: center;
+  font-family: 'Roboto', sans serif;
+  font-weight: lighter;
+}
+
+.first-section {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 50px;
+  //border: 1px solid black;
+}
+
+/*avatar customization starts*/
+//
+.avatar-container {
+  //border: 1px solid black;
+  width: 300px;
+  height: 300px;
+  position: relative;
+  display: flex;
+}
+
+.avatar-green-background {
+  background-color: #869D74;
+  width: 250px;
+  height: 250px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: 0;
+}
+
+.avatar-name {
+  color: white;
+  z-index: 2;
+  position: absolute;
+  bottom: 0;
+  right: 50%;
+}
+
+.avatar-square {
+  z-index: 1;
+  width: 250px;
+  height: 250px;
+}
+
+/*avatar customization ends*/
+
+
+/*services-card customization starts*/
+
+.services-container {
+  //border: 1px solid black;
+  width: 500px;
+  height: 300px;
+}
+
+.services-card-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.services-card {
+  //border: 1px solid black;
+  margin: 10px;
+  width: 400px;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 10px 10px 5px 0px rgba(0,0,0, 0.2);
+  background-color: white;
+  border-radius: 0 0 0 20px;
+  z-index: 1;
+
+}
+
+.book-button {
+  //border-radius: 20px;
+  width: 70px;
+  height: 30px;
+  align-self: center;
+  margin-right: 5px;
+  box-shadow: 10px 10px 5px 0px rgba(0,0,0, 0.2);
+  background-color: #006A52;
+  color: white;
+  text-align: center;
+}
+
+.services-card .service-name {
+  //border: 1px solid black;
+  margin: 5px;
+  width: 300px;
+  height: 30px;
+  align-self: center;
+  color: #548D2D;
+}
+
+.services-card .service-category {
+  //border: 1px solid black;
+  margin: 5px;
+  width: 150px;
+  height: 30px;
+  align-self: center;
+  color: lightgrey;
+  text-align: right;
+}
+
+.services-card-info {
+  //border: 1px solid black;
+  margin-left: 10px;
+  width: 400px;
+  height: 230px;
+  z-index: 0;
+  border-radius: 20px 0 0 0;
+  box-shadow: 10px 10px 5px 0px rgba(0,0,0, 0.2);
+  background-color: white;
+}
+
+.service-description {
+  //border: 1px solid black;
+  width: 100%;
+  height: 142px;
+  border-radius: 20px 0 0 0;
+  padding: 5px;
+}
+
+.service-area {
+  //border: 1px solid black;
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid lightgrey;
+  height: 40px;
+  background-color: rgba(134,157,116, 0.4);
+
+}
+
+.service-area .service-location {
+  //border: 1px solid black;
+  padding: 5px;
+}
+
+.service-area .service-remote {
+  //border: 1px solid black;
+  padding: 5px;
+}
+
+.service-price {
+  //border: 1px solid black;
+  width: 100%;
+  padding: 5px;
+  height: 40px;
+}
+
+
+
+/*SECOND SECTION OF PAGE STARTS*/
+
+.second-section {
+  //border: 1px solid black;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 50px;
+}
+
+.reviews-container {
+  //border: 1px solid black;
+  width: 300px;
+  height: 400px;
+  box-shadow: 10px 10px 5px 0px rgba(0,0,0, 0.2);
+  background-color: rgba(134,157,116, 0.4);
+  border-radius: 20px;
+  text-align: center;
+}
+
+.reviews-title {
+  padding: 10px;
+  height: 10%;
+  text-align: center;
+  border-radius: 20px 20px 0 0;
+}
+
+.reviews-box {
+  //border: 1px solid black;
+  width: 100%;
+  height: 80%;
+  background-color: white;
+  text-align: left;
+  padding: 10px;
+}
+
+.reviews-info {
+  display: flex;
+  justify-content: space-between;
+}
+
+.reviewer-name {
+  margin-bottom: 0;
+  padding-top: 5px;
+  font-size: smaller;
+}
+
+.rating {
+  margin-bottom: 0;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  font-size: smaller;
+}
+
+.review-description {
+  margin-bottom: 0;
+  padding-top: 10px;
+  padding-bottom: 5px;
+  font-size: smaller;
+  border-bottom: 2px solid #F5F5F5;
+}
+
+
+.showcase-container {
+  //border: 1px solid black;
+  width: 600px;
+  height: 400px;
+  box-shadow: 10px 10px 5px 0px rgba(0,0,0, 0.2);
+  background-color: rgba(134,157,116, 0.4);
+  border-radius: 20px;
+
+}
+
+.showcase-title {
+  //border: 1px solid black;
+  padding: 10px;
+  height: 10%;
+  text-align: center;
+  border-radius: 20px 20px 0 0;
+}
+
+
+.showcase-info {
+  //border: 1px solid black;
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+  height: 80%;
+  background-color: white;
+}
+
+.image-holder {
+  //border: 1px solid black;
+  height: 300px;
+  width: 300px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*services-card customization ends*/

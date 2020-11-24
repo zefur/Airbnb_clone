@@ -17,7 +17,7 @@ class SkillsController < ApplicationController
   end
   #GET /skills/:id
   def show
-    @skill = Skill.find(params[:id])
+    # @skill = Skill.find(params[:id])
   end
 
   #GET /skills/:id/edit

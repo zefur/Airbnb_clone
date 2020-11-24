@@ -12,6 +12,9 @@
 @import "components/index";
 @import "pages/index";
 @import "users/index";
+
+@import "skills/index";
+
 @import "devise/registrations/index";
 
 
@@ -33,6 +36,4 @@
     transform: translateX(-50%) translateY(-50%);
     background-size: cover;
   }
-
-
 
