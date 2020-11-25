@@ -1,1 +1,25 @@
-<h1>Skills#New</h1>
+<head>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,800;1,800&display=swap" rel="stylesheet">
+</head>
+
+<h1>Add a new skill</h1>
+
+
+<div class="skill-form-container">
+
+  <%= simple_form_for(@skill) do |f| %>
+
+    <div class="form-inputs">
+      <%= f.input :name %>
+      <%= f.input :description %>
+      <%= f.input :skill_type %>
+      <%= f.input :skill_location %>
+      <%= f.input :price %>
+    </div>
+
+    <div class="form-actions">
+      <%= f.button :submit, :class => "form-button"%>
+    </div>
+
+  <% end %>
+</div>
