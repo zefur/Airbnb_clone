@@ -59,6 +59,7 @@ h1 {
 .services-card-container {
   display: flex;
   justify-content: space-between;
+  // border: 1px solid black;
 }
 
 .services-card {
@@ -79,6 +80,18 @@ h1 {
   margin-right: 5px;
   box-shadow: 10px 10px 5px 0px rgba(0,0,0, 0.2);
   background-color: #006A52;
+  color: white;
+  text-align: center;
+}
+
+.view-button {
+  border-radius: 20px;
+  width: 70px;
+  height: 30px;
+  align-self: center;
+  margin-right: 5px;
+  box-shadow: 10px 10px 5px 0px rgba(0,0,0, 0.2);
+  // background-color: #006A52;
   color: white;
   text-align: center;
 }
