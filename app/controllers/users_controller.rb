@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+
   before_action :set_user, only: [:show, :edit, :update]
   def index
     @users = policy_scope(User).order(create_at: :desc)
@@ -16,7 +17,6 @@ class UsersController < ApplicationController
   def update
     @user = User.find(params[:id])
     @user.update(user_params)
-
     redirect_to user_path(@user)
   end
 
