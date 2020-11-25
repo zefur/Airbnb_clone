@@ -10,7 +10,12 @@ require 'faker'
 User.create(email:"jdhall@live.co.uk", password: "password")
 
 10.times do 
-    User.create(email:Faker::Internet.unique.email, password: "password")
+    User.create(email:Faker::Internet.unique.email, 
+                password: "password",
+                name:Faker::Name.name,
+                contact:Faker::Company.duns_number
+
+    )
 end
 
 20.times do
