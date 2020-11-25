@@ -1,0 +1,50 @@
+h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 800;
+  color: #006A52;
+  text-decoration: underline;
+}
+
+.skill-form-container {
+  //border: 1px solid black;
+  width: 50%;
+  height: 100%;
+  margin: auto;
+  margin-top: 20px;
+  padding-top: 20px;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  border-radius: 10px;
+
+}
+
+.skill-form-container > .form-inputs {
+  //border: 1px solid black;
+  width: 300px;
+  color: black;
+}
+
+/*.form-actions {
+  background-color: #006A52;
+  border-radius: 10px;
+  width: 200px;
+  text-decoration: none;
+  text-align: center;
+  justify-content: center;
+}*/
+
+.skill-form-container > .form-button {
+  color: #006A52;
+  background-color: white;
+  font-weight: bolder;
+  font-family: 'Montserrat', sans-serif;
+  text-decoration: none;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+.skill-form-container .form-button:hover {
+  color: white;
+  background-color: #006A52;
+
+}

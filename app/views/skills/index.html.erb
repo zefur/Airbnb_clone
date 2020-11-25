@@ -1,0 +1,96 @@
+<head>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,800;1,800&display=swap" rel="stylesheet">
+</head>
+
+
+<body>
+
+  <div class="page-wrapper">
+    <div class="row">
+
+      <!--Start Column 1: Left for content -->
+      <div class="double-column">
+
+        <!--Start White Column -->
+        <div class="white-column">
+          <div class="first-title">
+            <h1>Book your services</h1>
+          </div>
+          <div class="second-title">
+            <h1>TEACHING</h1>
+          </div>
+        </div>
+        <!--End White Column -->
+
+        <!--Start Cards Display-->
+        <div class="cards-display">
+
+          <!--Start one card-->
+         <% @skills.limit(10).each do |skill|%>
+          <div class="card-product">
+            <div>
+              <div>
+                <%= image_tag "https://kitt.lewagon.com/placeholder/users/arthur-littm", class: "avatar-large", alt: "avatar-large" %>
+              </div>
+
+              <div class="book-button">
+                <%= link_to "View", skill_path(skill) %>
+              </div>
+            </div>
+            <div class="card-product-infos">
+              <div class="card-name">
+                <h3><%= skill.user.name %></h3>
+              </div>
+
+              <div class="card-skill">
+                <h2><%= skill.name %></h2>
+              </div>
+
+              <div class="card-location">
+                <div class="price">
+                  <p><%= skill.price %></p>
+                </div>
+                <div class="location">
+                  <p><%= skill.skill_location %></p>
+                </div>
+              </div>
+
+              <div class="remote">
+                <p><%= skill.remote %></p>
+              </div>
+            </div>
+
+          </div>
+          
+          <% end %>
+          
+          <!--End one card-->
+
+
+        </div>
+        <!--End Cards Display-->
+
+      </div>
+      <!--End Column 1: Left for content -->
+
+
+      <!--Start Column 2: Right for map-->
+      <div class="column">
+        <div class="map-column">
+          <p>Map coming soon</p>
+        </div>
+      </div>
+      <!--End Column 2: Right for map-->
+    </div>
+    <!--end of row class-->
+  </div>
+  <!--end of page-wrapper class-->
+</body>
+
+
+
+
+
+
+
+
