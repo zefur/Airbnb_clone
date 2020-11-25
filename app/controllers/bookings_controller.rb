@@ -1,24 +1,27 @@
 class BookingsController < ApplicationController
-before_action :set_default
+before_action :set_skill
   def new
     @booking = Booking.new
   end
 
   def create
     @booking = Booking.new(bookings_params)
-    @user_id = current_user.id
-    if @booking.save?
-      puts "its done"
+    @booking.user_id = current_user.id
+    @booking.skill = @skill
+    if @booking.save
+      redirect_to skill_path(@skill)
     else
-      puts "something went wrong"
+      render "new"
     end
-
   end
 
   private 
-  
-  def set_default
-    params.require(:booking).permit(:date,:skill_id,:user_id)
+  def set_skill
+    @skill = Skill.find(params[:skill_id])
+  end
+
+  def bookings_params
+    params.require(:booking).permit(:date)
   end
 
 end
