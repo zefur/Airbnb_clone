@@ -18,7 +18,10 @@ before_action :set_default
   private 
   
   def set_default
-    params.require(:booking).permit(:date,:skill_id,:user_id)
+    @booking = Booking.find(params[:skill_id])
   end
 
+  def booking_params
+    params.require(:booking).permit(:date,:skill_id,:user_id)
+  end
 end

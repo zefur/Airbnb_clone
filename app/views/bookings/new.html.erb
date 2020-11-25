@@ -1,0 +1,36 @@
+  <!--navbar starts-->
+  <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+    <%= link_to "skillSWAPPER", class: "navbar-brand" %>
+      <%#= image_tag "tools.png" %>
+    <%# end %>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <%= link_to "Categories", "#", class: "nav-link" %>
+        </li>
+        <li class="nav-item">
+          <%= link_to "Sign up/Sign in/Profile", "#", class: "nav-link" %>
+        </li>
+         <li class="nav-item">
+          <%= link_to "Log out", "#", class: "nav-link" %>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <!--navbar ends-->
+
+  <div class='container'>
+    <h1>Book the skill</h1>
+    <h1>You are booking skill of</h1>
+    <img src="avatar.png" alt="Avatar" class="avatar">
+  </div>
+
+  <%= link_to "Book this service", "#", class: "btn btn-lg btn-light"  %><br>
+<%= link_to "Back", "#", class: "btn btn-lg btn-light"  %>

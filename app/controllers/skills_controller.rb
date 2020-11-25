@@ -55,7 +55,7 @@ class SkillsController < ApplicationController
   private
 
   def set_skill
-    @skill = Skill.find([:id])
+    @skill = Skill.find(params[:id])
     authorize @skill
   end
 
