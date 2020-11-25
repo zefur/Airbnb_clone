@@ -4,8 +4,6 @@ class Skill < ApplicationRecord
   belongs_to :user
   has_many :bookings
 
-  def self.filter(type)
-    Skill.find_by!(skill_type: type).skills
-  end
+  
 
 end
