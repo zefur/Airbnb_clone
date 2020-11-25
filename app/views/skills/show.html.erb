@@ -43,7 +43,7 @@
       </div>
 
       <div class="avatar-name">
-        <p>(Name)</p>
+        <p><%= @skill.user.name %></p>
       </div>
     </div>
     <!--avatar ends-->
@@ -54,11 +54,13 @@
       <div class="services-card-container">
         <div class="services-card a">
           <div class="service-name">
-            <p>(Coding lesson)</p>
+            <p><%= @skill.name  %></p>
           </div>
 
+
+
           <div class="service-category">
-            <p>(Teaching)</p>
+            <p><%= @skill.skill_type %></p>
           </div>
         </div>
 
@@ -70,21 +72,21 @@
       <!--service info card starts-->
       <div class="services-card-info">
         <div class="service-description">
-        <p>(Description)</p>
+        <p><%= @skill.description %></p>
         </div>
 
         <div class= "service-area">
           <div class="service-location">
-            <p>(Location)</p>
+            <p><%= @skill.user.location %></p>
           </div>
           <div class="service-remote">
-            <p>(remote)</p>
+            <p><%= @skill.remote %></p>
           </div>
         </div>
 
 
         <div class="service-price">
-          <p>(price)</p>
+          <p><%= @skill.price %></p>
         </div>
 
       </div>

@@ -1,5 +1,6 @@
 class SkillsController < ApplicationController
   before_action :set_skill, only: [:show, :edit, :update, :destroy]
+  # skip_before_action :authenticate_user!, only: [:index, :show]
 
   def home
   end
@@ -15,35 +16,35 @@ class SkillsController < ApplicationController
     @skill = Skill.new
     authorize @skill
   end
+   
+  #POST /skills
+  def create
+    @skill = Skill.new(skill_params)
+    @skill.user = current_user
+    authorize @skill
+   
+    if @skill.save
+      redirect_to @skill, notice: 'Skill was successfully created.'
+    else
+      render :new
+    end
+  end
+  
   #GET /skills/:id
   def show
-    # @skill = Skill.find(params[:id])
   end
 
   #GET /skills/:id/edit
   def edit
   end
 
-  #POST /skills
-  def create
-    @skill = Skill.new(skill_params)
-    @skill.user = current_user
-    authorize @skill
-
-    # if @skill.save
-    #   redirect_to @skill, notice 'Skill was successfully create.'
-    # else
-    #   render :new
-    # end
-  end
-
   #PATCH,PUT  /skills/:id
   def update
-    # if @skill.update(skill_params)
-    #   redirect_to @skill, notice 'Successfully updated'
-    # else
-    #   render :edit
-    # end
+    if @skill.update(skill_params)
+      redirect_to @skill, notice: 'Successfully updated'
+    else
+      render :edit
+    end
   end
 
   #DELETE /skills/:id
@@ -60,6 +61,6 @@ class SkillsController < ApplicationController
   end
 
   def skill_params
-    params.require(:skill).permit(:name, :description, :price, :skill_location, :skill_type)
+    params.require(:skill).permit(:name, :description, :price, :skill_location, :skill_type, :remote)
   end
 end
