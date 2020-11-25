@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_action :set_skill, only: [:show, :edit, :update]
+  before_action :set_user, only: [:show, :edit, :update]
   def index
     @users = policy_scope(User).order(create_at: :desc)
   end
