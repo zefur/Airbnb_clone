@@ -1,11 +1,16 @@
 .container {
-  padding-top: 3rem!important;
-  margin-left:0;
+  padding-top: 3rem;
+  margin:0 auto;
+  width: 700px;
 }
 
 .justify-content-center {
-justify-content: center!important;
-background-color: #006B53;
+  justify-content: center;
+  background-color: rgba(2,70,72,0.8);
+  backdrop-filter: blur(5px);
+  border-radius: 20px;
+  -webkit-backdrop-filter: blur(5px);
+
 }
 
 .row {
@@ -15,32 +20,45 @@ background-color: #006B53;
   margin-left: -15px;
 }
 
-h2 {
-color: white;
-padding: 10px 20px;
-text-align: center;
-font-family: 'Roboto', sans-serif;
-margin-top: 10px;
+.form > h2 {
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  margin-top: 10px;
 }
 
 .form {
-    display: flex;
-    flex-direction: column;
-    color: white;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-    font-family: 'Roboto', sans-serif;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  font-family: 'Roboto', sans-serif;
 }
 
 .form-inputs {
   margin: 15px 15px;
 }
 
+.inputb {
+  background-color: rgba(white, 0);
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 2px solid white;
+  color: white;
+  :hover {
+    background-color: rgba(white, 0);
+  }
+}
+
 .form-actions {
- display: flex;
- justify-content: center;
- align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
 input.btn {
   padding: 10px 25px;
   margin: 30px 70px;
@@ -48,7 +66,7 @@ input.btn {
 }
 
 input.btn:hover {
-  background-color: yellow;
+  /*background-color: yellow;*/
   color: #898b8a;
 }
 
@@ -57,9 +75,10 @@ input.btn:hover {
  padding: 10px 25px;
  margin: 30px 70px;
  }
+
  a.btn-light:hover {
-  color:white;
-  background-color: #ec524b;
+  color:black;
+  background-color: lightgrey;
  }
 
 }
@@ -67,11 +86,10 @@ input.btn:hover {
 .link {
   padding: 10px;
   a {
-  color: yellow;
+  color: white;
   padding-bottom: 50px;
-
+  text-decoration: none;
 }
-
 
 }
 
