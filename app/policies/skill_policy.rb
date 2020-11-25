@@ -17,9 +17,9 @@ class SkillPolicy < ApplicationPolicy
     true
   end
 
-  # def edit?
-  #   user == record.user
-  # end
+  def edit?
+    true
+  end
 
   def update?
     user_is_owner_or_admin?
