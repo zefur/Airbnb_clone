@@ -47,15 +47,24 @@
            <%= f.input :contact, label_html:{class:"label"} %>
            <%= f.input :email, label_html:{class:"label"} %>
         </div>
+
         <div class="form-actions">
         <%= f.button :submit %>
-        <%= link_to 'Back', skills_path %>
-
-        </div>
+        <%= link_to '+ Add skill', new_skill_path %>
       </div>
-    <% end %>
+   <% end %>
+
   </div>
+
+
 </div>
+
+
+
+
+<div class="form-actions-return">
+       <%= link_to 'Back', skills_path %>
+  </div>
 </div>
 
 

@@ -38,51 +38,41 @@
       </div>
 
       <div class="avatar-name">
-        <p>(Name)</p>
+        <p><%= @user.name %></p>
       </div>
     </div>
     <!--avatar ends-->
 
     <!--services starts-->
     <div class="services-container">
-
+      <% @user.skills.limit(3).each do |skill| %>
       <div class="services-card-container">
-
-        <div class="services-card a">
+        
+        <div class="services-card">
+        
           <div class="service-name">
-            <p>(Coding lesson)</p>
+          
+            <p><%= skill.name %></p>
           </div>
-
+          
           <div class="service-category">
-            <p>(Teaching)</p>
+           <p><%= skill.skill_type %>
           </div>
+          
+        </div>
+
+        <div class="view-button">
+          <%= link_to "View", skill_path(skill) %>
         </div>
 
         <div class="book-button">
-          <p>(Book)</p>
+         <%#= link_to "Book", new_skill_booking_path(skill)%>
         </div>
-
+        
       </div>
-
-      <div class="services-card-container">
-
-        <div class="services-card a">
-          <div class="service-name">
-            <p>(Coding service)</p>
-          </div>
-
-          <div class="service-category">
-            <p>(Coding)</p>
-          </div>
-        </div>
-
-        <div class="book-button">
-          <p>(Book)</p>
-        </div>
-
-      </div>
-
+       <% end %>
     </div>
+   
     <!--services ends-->
   </div>
 
@@ -92,7 +82,7 @@
     <div class="contact-container">
       <p>Contact Info</p>
       <div class="contact-info">
-        <p> (Lorem ipsum dolor sit amet, consectetur adipisicing, elit. Iusto et obcaecati delectus necessitatibus officiis molestias minima, iure. Ipsum, exercitationem sequi dolore?) </p>
+        <p><%= @user.contact %>  </p>
       </div>
     </div>
 
@@ -116,20 +106,20 @@
       </div>
 
       <div class="booking-content">
-
+        <% @user.skills.limit(1).each do |skill| %>
         <div class="booking-skill">
-          <p>(Skill name)</p>
+          <p><%= skill.name %></p>
         </div>
 
         <div class="booking-name">
-          <p>(user name)</p>
+          <p><%= skill.name %></p>
         </div>
 
         <div class="booking-date">
-          <p>(book date)</p>
+          <p>25/11/2020</p>
         </div>
       </div>
-
+    <% end %>
     </div>
 
     <!--booking-container ends-->
