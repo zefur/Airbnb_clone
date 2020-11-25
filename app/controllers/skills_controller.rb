@@ -4,7 +4,7 @@ class SkillsController < ApplicationController
 
   def home
   end
-  
+
   #GET /skills
   def index
     @skills = Skill.all
@@ -22,9 +22,9 @@ class SkillsController < ApplicationController
     @skill = Skill.new(skill_params)
     @skill.user = current_user
     authorize @skill
-    
+   
     if @skill.save
-      redirect_to @skill, notice: 'Skill was successfully create.'
+      redirect_to @skill, notice: 'Skill was successfully created.'
     else
       render :new
     end
