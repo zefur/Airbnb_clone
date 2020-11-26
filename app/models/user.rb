@@ -6,4 +6,5 @@ class User < ApplicationRecord
 
   has_many :skills
   has_many :bookings
+  has_one_attached :avatar
 end

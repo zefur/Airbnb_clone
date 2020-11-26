@@ -1,0 +1,17 @@
+.navbar-light {
+  background-color: white;
+  border-bottom: 1px solid lightgrey;
+  height: 50px;
+  justify-content: space-between;
+}
+
+.nav-link, .nav-link:hover  {
+  text-decoration: none;
+  color: inherit;
+  margin: 0 10px;
+}
+
+.navbar-light .navbar-collapse {
+  flex-grow: 0;
+}
+

@@ -2,22 +2,24 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,800;1,800&display=swap" rel="stylesheet">
 </head>
 
+<%=render "shared/nav"  %>
+
 
 <body>
 
   <div class="page-wrapper">
-    <div class="row">
+    <div class="skill-home-page row">
 
       <!--Start Column 1: Left for content -->
-      <div class="double-column">
+      <div class="skill-home-page-collumn double-column">
 
         <!--Start White Column -->
         <div class="white-column">
           <div class="first-title">
-            <h1>Book your services</h1>
+            <h2>Book your services</h2>
           </div>
           <div class="second-title">
-            <h1>TEACHING</h1>
+            <h2>TEACHING</h2>
           </div>
         </div>
         <!--End White Column -->
@@ -26,14 +28,14 @@
         <div class="cards-display">
 
           <!--Start one card-->
-         <% @skills.limit(10).each do |skill|%>
+         <% @skills.limit(8).each do |skill|%>
           <div class="card-product">
             <div>
               <div>
                 <%= image_tag "https://kitt.lewagon.com/placeholder/users/arthur-littm", class: "avatar-large", alt: "avatar-large" %>
               </div>
 
-              <div class="book-button">
+              <div class="skill-home-page-book-button">
                 <%= link_to "View", skill_path(skill) %>
               </div>
             </div>
@@ -61,9 +63,9 @@
             </div>
 
           </div>
-          
+
           <% end %>
-          
+
           <!--End one card-->
 
 
@@ -86,6 +88,12 @@
     </div>
     <!--end of row class-->
   </div>
+
+    <div class= "index-skills-back-button d-flex justify-content-center ">
+    <%= link_to "Back",root_path, class: "btn btn-lg btn-light"%>
+     </div>
+
+
   <!--end of page-wrapper class-->
 </body>
 

@@ -1,20 +1,22 @@
-.container {
-margin: 0;
-padding: 0;
-}
-
-
-.banner-content {
+.top-home {
   text-align: left;
+  h1 {
+  text-align: left;
+  text-decoration: none;
+  margin-left: 0;
+  }
+  .btn {
+    margin: 0;
+    padding-left: 20px 20px;
+  }
+  .btn:hover{
+  background-color:yellow;
+  color:  #898b8a;
+  }
+
 }
 
-
-.left-container {
-align-items: center;
-
-}
-
-.navigation-bar {
+.home-navigation-bar {
 margin: 0;
 padding: 0;
 display: flex;
@@ -25,7 +27,7 @@ background-color: white;
 
 }
 
-.navigation-bar-icons {
+.home-navigation-bar-icons {
 margin: 0;
 padding: 0;
 display: flex;
