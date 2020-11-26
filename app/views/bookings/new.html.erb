@@ -1,6 +1,14 @@
 <%= simple_form_for [@skill, @booking] do |f|%>
 <%= f.input :date %>
-<%= f.submit %>
+
+
+ <div class= "index-skills-back-button d-flex justify-content-center ">
+    <%= link_to "Back", @skill, class: "btn btn-lg btn-light"%>
+    <%= f.submit %>
+  </div>
 
 <% end %>
+
+
+
 
