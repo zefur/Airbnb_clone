@@ -14,9 +14,9 @@ class SkillsController < ApplicationController
 
   def tagged
     if params[:tag].present?
-      @skill = Skill.tagged_with(params[:tag])
+      @skills = Skill.tagged_with(params[:tag])
     else
-      @skill = Skill.all
+      @skills = Skill.all
     end
   end
   private
