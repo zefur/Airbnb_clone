@@ -9,8 +9,17 @@ class SkillsController < ApplicationController
   def index
     @skills = Skill.all
     @skills = policy_scope(Skill).order(created_at: :desc)
+    
+    
+    @markers = @skills.geocoded.map do |skill|
+      {
+        lat: skill.latitude,
+        lng: skill.longitude
+      }
+    end
     # @skill = Skill.find(params[:tag_id])
   end
+  
   #GET /skills/new
   def new
     @skill = Skill.new
