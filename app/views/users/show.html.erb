@@ -43,6 +43,8 @@
 
     <!--services starts-->
     <div class="services-container">
+      <h2>My services</h2>
+
       <% @user.skills.limit(3).each do |skill| %>
 
         <div class="one-service">
@@ -79,6 +81,7 @@
 
     <!-- booking-container starts-->
     <div class="booking-container">
+      <h2>Bookings</h2>
       <div class="booking-header">
 
         <div class="booking-skill">

@@ -78,17 +78,23 @@ body {
 .second-section {
   display: flex;
   justify-content: space-around;
-  margin-top: 70px;
   //border: 1px solid black;
+  padding-top: 30px;
+
 }
 
 .services-container {
   //border: 1px solid black;
   width: 400px;
-  height: 250px;
+  height: 400px;
   padding: 5px;
   margin-right: 5px;
   margin-left: 5px;
+  margin-top: 0;
+}
+
+.services-container h2{
+  font-family: 'Quicksand', sans-serif;
 }
 
 .one-service {
@@ -108,7 +114,7 @@ body {
   text-align: left;
   padding-left: 5px;
 
-  color: #CED8C8;
+  color: rgba(105, 129, 87, 0.5);
 }
 
 .one-service-buttons {
@@ -190,6 +196,11 @@ body {
   //box-shadow: 10px 10px 5px 0px rgba(0,0,0, 0.2);
   background-color: white;
   margin-right: 5px;
+  margin-top: 5px;
+}
+
+.booking-container h2{
+  font-family: 'Quicksand', sans-serif;
 }
 
 .booking-header {
@@ -253,21 +264,42 @@ body {
 }
 
 
-.booking-header .booking-skill p, .booking-name p{
+.booking-header .booking-skill p{
   color: black;
+  font-family: 'Quicksand', sans-serif;
+
 }
 
 
 .booking-header .booking-name p{
   color: black;
+  font-family: 'Quicksand', sans-serif;
+
 }
 
 .booking-header .booking-date p{
   color: black;
+  font-family: 'Quicksand', sans-serif;
+
 }
 
 
+.booking-content .booking-skill p{
+  color: black;
+  font-weight: lighter;
 
+}
+
+
+.booking-content .booking-name p{
+  color: black;
+  font-weight: lighter;
+}
+
+.booking-content .booking-date p{
+  color: black;
+  font-weight: lighter;
+}
 
 
 

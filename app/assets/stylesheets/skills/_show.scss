@@ -82,7 +82,7 @@ body {
   //border: 1px solid black;
   display: flex;
   justify-content: space-around;
-  margin-top: 50px;
+  padding-top: 30px;
 }
 
 .service-box {
@@ -90,7 +90,7 @@ body {
   margin: 10px;
   padding-right: 20px;
   width: 500px;
-  height: 500px;
+  height: 400px;
 }
 
 //.service-box > p{
@@ -104,7 +104,6 @@ body {
   color: black;
   font-size: 30px;
   border-bottom: 1px solid grey;
-
 }
 
 #service-category  > p{
@@ -119,7 +118,9 @@ body {
   //border: 1px solid black;
   text-align: left;
   color: black;
-  font-weight: lighter;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 200px;
+
 }
 
 #service-location  > p{
@@ -212,23 +213,11 @@ body {
 
 }
 
-.showcase-title {
-  //border: 1px solid black;
-  padding: 10px;
-  height: 10%;
+.showcase-container h2{
+  font-family: 'Quicksand', sans-serif;
   text-align: center;
-  border-radius: 20px 20px 0 0;
 }
 
-
-.showcase-info {
-  //border: 1px solid black;
-  display: flex;
-  justify-content: space-around;
-  padding: 10px;
-  height: 80%;
-  background-color: white;
-}
 
 .image-holder {
   //border: 1px solid black;
