@@ -1,11 +1,15 @@
+.left-container{
+border-style: solid 5px black;
+
+}
 
 
 .btn {
     padding: 10px 15px;
-    border-color:#006A52;
+    // border-color:#006A52;
     color:#006A52;
     background-color: white;
-    border-radius: 10px;
+    border-radius: 5px;
     font-weight: bold;
     font-size: 15px;
     font-family: 'Roboto', sans-serif;
@@ -22,7 +26,6 @@ text-align: center;
 margin:0;
 }
 
-
 .navigation-bar-icons {
  a {
   display: block;
@@ -35,26 +38,15 @@ margin:0;
   text-align: center;
 
  }
+
+ a:hover{
+ opacity:0.5;
+ text-decoration: none;
+ }
 }
 
 
-.col-6 {
-font-family:'Roboto', sans-serif;
-padding: 7px 5px 5px 5px;
-display: flex;
-align-items: center;
-p {
- color:#006A52;
- font-weight: light;
- font-family:'Roboto', sans-serif;
- padding: 0;
- font-size: 8px;
 
-}
-img {
-margin-top: 3px;
-}
-}
 
 
 

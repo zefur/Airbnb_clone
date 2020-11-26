@@ -1,5 +1,5 @@
 
-.row {
+.skill-home-page{
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -7,7 +7,7 @@
   justify-content: space-between;
 }
 
-.double-column {
+.skill-home-page-collumn {
   //border: 1px solid black;
   display: flex;
   flex-direction: column;
@@ -35,20 +35,23 @@
 }
 
 
-.first-title h1 {
+.first-title h2 {
   //border: 1px solid black;
+  text-decoration: none;
   font-weight: bolder;
   color: #F3F2F2;
   margin-bottom: 0;
 }
 
-.second-title h1 {
+.second-title h2 {
   //border: 1px solid black;
+  text-decoration: none;
   font-weight: bolder;
   color: #006A52;
   margin-top: 0;
   padding-left: 40%;
   font-family: 'Montserrat', sans-serif;
+
 }
 
 
@@ -149,7 +152,7 @@
   padding: 0;
 }
 
-.book-button {
+.skill-home-page-book-button {
   //border-radius: 20px;
   width: 70px;
   height: 20px;
@@ -162,7 +165,7 @@
   padding-bottom: 0;
 }
 
-.book-button p {
+.skill-home-page-book-button p {
   color: #006A52;
   font-weight: 200;
   font-family: 'Montserrat', sans-serif;
@@ -178,6 +181,17 @@
 }
 
 
+.index-skills-back-button {
+  .btn{
+  padding: 10px 25px;
+  border: solid 2px #006A52;
+  }
+  .btn:hover{
+  background-color:yellow;
+  color:  #898b8a;
+  }
+
+  }
 
 
 
