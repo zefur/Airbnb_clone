@@ -20,6 +20,7 @@ body {
   justify-content: left;
   margin-top: 0;
   padding: 30px;
+  background-color: rgb(206,216,200);
 }
 
 
@@ -48,6 +49,14 @@ body {
 #info-box-name {
   //border: 1px solid black;
   text-align: left;
+
+}
+
+#info-box-description > p {
+  //border: 1px solid black;
+  text-align: left;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 200;
 
 }
 

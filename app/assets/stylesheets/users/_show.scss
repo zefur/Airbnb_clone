@@ -1,3 +1,19 @@
+body {
+  margin: 0;
+  margin-bottom: 100px;
+  background-color: #F7F7F7;
+}
+
+.form-actions-back-button {
+  margin-right: auto;
+}
+
+.users-show-container {
+  max-width: 70vw;
+  margin: 30px auto;
+  background-color: white;
+}
+
 .first-section {
   //border: 1px solid black;
   display: flex;
@@ -6,6 +22,7 @@
   padding: 30px;
   background-color: rgb(206,216,200);
 }
+
 
 
 //
@@ -24,11 +41,19 @@
   //border: 1px solid black;
 }
 
+.user-information > h2 {
+
+  font-family: 'Quicksand', sans-serif;
+}
+
+
 #info-box-name {
   //border: 1px solid black;
   text-align: left;
 
 }
+
+
 
 #info-box-location {
   //border: 1px solid black;
@@ -43,7 +68,6 @@
 }
 
 
-
 /*SECOND SECTION OF PAGE STARTS*/
 
 .second-section {
@@ -55,8 +79,10 @@
 
 .services-container {
   //border: 1px solid black;
-  width: 500px;
+  width: 400px;
   height: 250px;
+  margin: 20px;
+  padding: 5px;
 }
 
 .one-service {

@@ -1,7 +1,20 @@
+<head>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&family=Quicksand:wght@300&display=swap" rel="stylesheet">
+</head>
+
   <!--navbar starts-->
   <%= render 'shared/nav' %>
 
   <!--navbar ends-->
+
+<body>
+
+  <div class= "form-actions-back-button">
+    <%= link_to "Back",skills_path, class: "btn btn-lg btn-light"  %>
+  </div>
+
+<div class="users-show-container">
+
 
 
   <!--FIRST SECTION OF PAGE STARTS-->
@@ -12,10 +25,12 @@
       <%= image_tag "https://kitt.lewagon.com/placeholder/users/krokrob", class: "avatar-square", alt: "avatar-square" %>
     </div>
 
-    <div class="user-information">
-      <h3 id="info-box-name"><%= @user.name %></h3>
-      <p id="info-box-location">Location<%= @user.location %></p>
-      <p id="info-box-contact">phone number <%= @user.contact %></p>
+<div class="user-information">
+      <h2>About me</h2>
+      <h3 id="info-box-name">First Name Last Name <%#= @skill.user.name %></h3>
+      <p id="info-box-description">endYore and once nothing upstarting still whose was metell, and plainly one this and my i angels, linking of for be came before dreams expressing and velvet, let in truly the my louder nothing doubting dreary, bird all the or whom sitting. Tis raven evermore bust volume aptly thinking pallid rustling all. This nepenthe and at was still nights. For but forgiveness and floating, unhappy my entrance shadow quoth that all then. The throws forgiveness whose heard dreaming maiden that denser heaven. Never me bosoms agreeing fiend the his such thou door, stillness at thee into books and no i.<%#= @skill.user.location %></p>
+      <p id="info-box-location">Location<%#= @skill.user.location %></p>
+      <p id="info-box-contact">phone number <%#= @skill.user.contact %></p>
     </div>
 </div>
   <!--FIRST SECTION OF PAGE ENDS-->
@@ -103,7 +118,8 @@
 
   <!--SECOND SECTION OF PAGE ENDS-->
 
-
+</div>
+</body>
 
 
 
