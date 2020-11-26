@@ -3,13 +3,13 @@
     <!-- Left content -->
     <div style="flex: 1.4;">
       <div class="banner">
-      <div class="row align-items-center">
+      <div class="row align-items-center fixed-top;">
 
-        <div class="col-sm-12 align-items-center ml-4 mt-2 ">
+        <div class="top-home col-sm-12 align-items-center ml-4 mt-2 ">
           <h1>Explore the skills<br>you need</h1>
         </div>
 
-        <div class="col-sm-12 align-items-center ml-4 mt-2 justify-content-start ">
+        <div class="top-home col-sm-12 align-items-center ml-4 mt-2 justify-content-start ">
          <%= link_to "Sign Up", new_user_registration_path, class: "btn btn-lg btn-light"  %>
          <%= link_to "Log In", new_user_session_path, class: "btn btn-lg btn-light"  %>
         </div>
@@ -20,11 +20,11 @@
     <!-- Right content -->
     <div style="flex: 0.6; background-color: white;" class = "left-container">
 
-      <div class="container">
-        <div class="row align-items-center">
+      <div class="container mt-4 mb-4 ml-3">
+        <div class="row align-items-center justify-content-center offset-sm-12">
 
-          <div class="col-sm-8">
-            <%= link_to "Browse All Skills", skills_path, class: "btn btn-lg btn-light" %>
+          <div class="col-sm-12 justify-content-center d-flex">
+            <%= link_to "Browse All Skills", skills_path, style: 'margin: 0px !important;', class: "btn btn-lg btn-light" %>
           </div>
 
           <div class="col-sm-12 mb-2">
@@ -32,7 +32,7 @@
           </div>
 
         <div class= "navigation-bar">
-            <div class= "navigation-bar-icons row align-items-center">
+            <div class= "navigation-bar-icons row align-items-center ">
 
             <%= link_to '#', class: "col-5 mt-2 pt-2 pb-2"   do  %>
                <div>
