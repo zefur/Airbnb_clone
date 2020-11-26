@@ -2,65 +2,114 @@
     <!-- Left content -->
     <div style="flex: 1.4;">
       <div class="banner">
-      <div class= "banner-content" >
-        <h1>Explore the skills<br>you need</h1>
-         <%= link_to "Sign Up", new_user_registration_path, class: "btn btn-lg btn-light"  %><br>
+      <div class="row align-items-center">
+
+        <div class="col-sm-12 align-items-center ml-4 mt-2 ">
+          <h1>Explore the skills<br>you need</h1>
+        </div>
+
+        <div class="col-sm-12 align-items-center ml-4 mt-2 justify-content-start ">
+         <%= link_to "Sign Up", new_user_registration_path, class: "btn btn-lg btn-light"  %>
          <%= link_to "Log In", new_user_session_path, class: "btn btn-lg btn-light"  %>
         </div>
       </div>
     </div>
+  </div>
 
     <!-- Right content -->
     <div style="flex: 0.6; background-color: white;" class = "left-container">
-        <%= link_to "Browse All Skills", skills_path, class: "btn btn-lg btn-light"  %>
-          <p>or</p>
-        <div class= "navigation-bar">
-            <div class= "navigation-bar-icons row">
 
-            <%= link_to '#', class: "col-4 form-group"   do  %>
+      <div class="container">
+        <div class="row align-items-center">
+
+          <div class="col-sm-8">
+            <%= link_to "Browse All Skills", skills_path, class: "btn btn-lg btn-light" %>
+          </div>
+
+          <div class="col-sm-12 mb-2">
+            <p>or</p>
+          </div>
+
+        <div class= "navigation-bar">
+            <div class= "navigation-bar-icons row align-items-center">
+
+            <%= link_to '#', class: "col-5 mt-2 pt-2 pb-2"   do  %>
                <div>
                   <%= image_tag('steering-wheel.png', height: '45', width: '45') %>
                   <p>Driving</p>
                </div>
             <% end %>
 
-            <%= link_to '#', class: "col-4 form-group"  do  %>
+            <%= link_to '#', class: "col-5 mt-2 pt-2 pb-2"  do  %>
               <div >
                 <%= image_tag('tools-2.png', height: '45', width: '45') %>
                  <p>DIY</p>
               </div>
             <% end %>
 
-            <%= link_to '#', class: "col-4 form-group"  do  %>
+            <%= link_to '#', class: "col-5 mt-2 pt-2 pb-2"  do  %>
               <div >
                 <%= image_tag('rest-api.png', height: '45', width: '45') %>
                  <p>Coding</p>
               </div>
             <% end %>
 
-            <%= link_to '#', class: "col-4 form-group" do  %>
+            <%= link_to '#', class: "col-5 mt-2 pt-2 pb-2" do  %>
                <div>
                    <%= image_tag('dishes.png', height: '45', width: '45') %>
                  <p>Chores </p>
               </div>
             <% end %>
 
-            <%= link_to '#', class: "col-4 form-group"  do  %>
+            <%= link_to '#', class: "col-5 mt-2 pt-2 pb-2"  do  %>
               <div>
                 <%= image_tag('e-learning.png', height: '45', width: '45') %>
                  <p>Teaching</p>
               </div>
             <% end %>
 
-            <%= link_to '#', class: "col-4 form-group"  do  %>
+            <%= link_to '#', class: "col-5 mt-2 pt-2 pb-2"  do  %>
+                <div>
+                   <%= image_tag('flowers-garden.png', height: '45', width: '45') %>
+                 <p>Gardening</p>
+              </div>
+            <% end %>
+
+
+          <%= link_to '#', class: "col-5 mt-2 pt-2 pb-2 "  do  %>
+              <div>
+                <%= image_tag('pencil-ruler.png', height: '45', width: '45') %>
+                 <p>Craftwork</p>
+              </div>
+            <% end %>
+
+            <%= link_to '#', class: "col-5 mt-2 pt-2 pb-2"  do  %>
                 <div>
                    <%= image_tag('paw.png', height: '45', width: '45') %>
                  <p>Pet care</p>
               </div>
             <% end %>
+
+             <%= link_to '#', class: "col-5 mt-2 pt-2 pb-2"  do  %>
+              <div>
+                <%= image_tag('baby-face.png', height: '45', width: '45') %>
+                 <p>Baby care</p>
+              </div>
+            <% end %>
+
+            <%= link_to '#', class: "col-5 mt-2 pt-2 pb-2"  do  %>
+                <div>
+                   <%= image_tag('art.png', height: '45', width: '45') %>
+                 <p>Art</p>
+              </div>
+            <% end %>
+
+
+        </div>
         </div>
       </div>
     </div>
+</div>
 </div>
 
 
