@@ -2,7 +2,7 @@ module ApplicationHelper
 
     def tag_list
         %w[Driving DIY Coding Chores Teaching Gardening Craftwork "Pet care" "Baby care" Art]
-
+end
     def loginBar(style)
         if current_user.nil?
           (link_to 'Register', new_user_registration_path, class: style) +
@@ -12,3 +12,5 @@ module ApplicationHelper
         end
       end
 end
+
+
