@@ -66,8 +66,9 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 # dev choice
 gem 'faker'
 
+
 gem 'bootstrap'
 gem 'cloudinary'
-
+gem 'acts-as-taggable-on'
 
 
