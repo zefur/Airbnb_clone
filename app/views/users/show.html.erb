@@ -1,0 +1,132 @@
+  <!--navbar starts-->
+  <%= render 'shared/nav' %>
+
+  <!--navbar ends-->
+
+  <h1>About me</h1>
+
+  <div class="first-section">
+
+    <!--avatar starts-->
+    <div class="avatar-container">
+      <%= image_tag "https://kitt.lewagon.com/placeholder/users/krokrob", class: "avatar-square", alt: "avatar-square" %>
+
+      <div class="avatar-green-background">
+      </div>
+
+      <div class="avatar-name">
+        <p><%= @user.name %></p>
+      </div>
+    </div>
+    <!--avatar ends-->
+
+    <!--services starts-->
+    <div class="services-container">
+      <% @user.skills.limit(3).each do |skill| %>
+      <div class="services-card-container">
+        
+        <div class="services-card">
+        
+          <div class="service-name">
+          
+            <p><%= skill.name %></p>
+          </div>
+          
+          <div class="service-category">
+           <p><%= skill.skill_type %>
+          </div>
+          
+        </div>
+
+        <div class="view-button">
+          <%= link_to "View", skill_path(skill) %>
+        </div>
+
+        <div class="book-button">
+         <%#= link_to "Book", new_skill_booking_path(skill)%>
+        </div>
+        
+      </div>
+       <% end %>
+    </div>
+   
+    <!--services ends-->
+  </div>
+
+  <div class="second-section">
+
+    <!--contact-container starts-->
+    <div class="contact-container">
+      <p>Contact Info</p>
+      <div class="contact-info">
+        <p><%= @user.contact %>  </p>
+      </div>
+    </div>
+
+    <!--contact-container ends-->
+
+    <!-- booking-container starts-->
+    <div class="booking-container">
+      <div class="booking-header">
+
+        <div class="booking-skill">
+          <p>Skill</p>
+        </div>
+
+        <div class="booking-name">
+          <p>Booked by</p>
+        </div>
+
+        <div class="booking-date">
+          <p>Date</p>
+        </div>
+      </div>
+
+      <div class="booking-content">
+        <% @user.skills.limit(1).each do |skill| %>
+        <div class="booking-skill">
+          <p><%= skill.name %></p>
+        </div>
+
+        <div class="booking-name">
+          <p><%= skill.name %></p>
+        </div>
+
+        <div class="booking-date">
+          <p>25/11/2020</p>
+        </div>
+      </div>
+    <% end %>
+    </div>
+
+    <!--booking-container ends-->
+
+
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

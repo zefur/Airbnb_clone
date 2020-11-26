@@ -1,12 +1,17 @@
-.navbar-lewagon {
+.navbar-light {
+  background-color: white;
+  border-bottom: 1px solid lightgrey;
+  height: 50px;
   justify-content: space-between;
-  background: white;
 }
 
-.navbar-lewagon .navbar-collapse {
+.nav-link, .nav-link:hover  {
+  text-decoration: none;
+  color: inherit;
+  margin: 0 10px;
+}
+
+.navbar-light .navbar-collapse {
   flex-grow: 0;
 }
 
-.navbar-lewagon .navbar-brand img {
-  width: 40px;
-}

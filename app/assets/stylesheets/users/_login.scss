@@ -1,0 +1,81 @@
+
+.containerj {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+
+.login-formj {
+
+  display: flex;
+  width: 472px;
+  height: 569px;
+  flex-direction: column;
+  background-color: rgba(15, 48, 87, 0.8);
+  border-radius: 10px;
+  color: rgba(white, 0.7);
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.inputj {
+
+  width: 379px;
+  height: 40px;
+  margin-top: 40px;
+  background-color: rgba(white, 0);
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 2px solid white;
+  color: white;
+}
+
+
+.centerj {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  padding-top: 30px;
+
+
+}
+.columnj {
+  flex-direction: column;
+}
+
+a {
+  color: white;
+  :hover {
+    text-decoration: none;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

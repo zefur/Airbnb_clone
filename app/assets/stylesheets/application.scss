@@ -11,3 +11,29 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+@import "users/index";
+
+@import "skills/index";
+
+@import "devise/registrations/index";
+
+
+
+
+@import "users/login";
+
+#background{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1000;
+    margin:0;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    background-size: cover;
+  }
+
