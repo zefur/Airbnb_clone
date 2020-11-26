@@ -1,71 +1,68 @@
 <!--navbar starts-->
-  <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
-    <%= link_to "skillSWAPPER", class: "navbar-brand" %>
-      <%#= image_tag "tools.png" %>
-    <%# end %>
-
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+<%= render 'shared/nav' %>
 
 
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-          <%= link_to "Categories", "#", class: "nav-link" %>
-        </li>
-        <li class="nav-item">
-          <%= link_to "Sign up/Sign in/Profile", "#", class: "nav-link" %>
-        </li>
-         <li class="nav-item">
-          <%= link_to "Log out", "#", class: "nav-link" %>
-        </li>
-      </ul>
-    </div>
-  </div>
 
-  <div class = "container">
-  <div style="display: flex;">
-    <!-- Left content -->
-    <div style="flex: 1;">
-         <div class= "d-flex flex-column align-items-center ml-4" style="border-right: 1px solid black" >
-          <h3>User profile</h3>
-          <%= image_tag "https://images.unsplash.com/photo-1569913486515-b74bf7751574?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=670&q=80", class: "avatar-round", alt: "avatar-round" %>
-           <%= link_to "+ Edit Photo", new_user_session_path %>
-        </div>
-      </div>
-    </div>
 
-  <div style="flex: 1.5;">
-     <div clas = "row justify-content-center">
-<!--     <div class = "col-12 col-md-6 col-lg-4">
- --><div class = "form">
-      <%= simple_form_for(@user) do |f| %>
-      <%= f.error_notification %>
-        <div class="form-inputs">
-           <%= f.input :name, label_html:{class:"label"} %>
-           <%= f.input :contact, label_html:{class:"label"} %>
-           <%= f.input :email, label_html:{class:"label"} %>
-        </div>
 
-        <div class="form-actions">
-        <%= f.button :submit %>
-        <%= link_to '+ Add skill', new_skill_path %>
-      </div>
-   <% end %>
+
+
+<div class= "row">
+  <div class='col-3' style="background-color: blue; height: 100vh">
+    <h3>User profile</h3>
+
+    <%= image_tag "https://images.unsplash.com/photo-1569913486515-b74bf7751574?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=670&q=80", class: "avatar-round", alt: "avatar-round" %>
+
+    <%= link_to "+ Edit Photo", new_user_session_path %>
 
   </div>
+  
+  <div class= 'col-9' style='background-color: yellow; height: 50vh'>
+    <div >
+      <%= form_for @user, defaults: { wrapper: false } do |f| %>
+       
+          <div class= "row justify-content-around">
+            <div class="col-6 ">
+            <div>
+            <%= f.label :name %>
+              <%= f.text_field :name, label_html:{class:"label"} %>
+              </div>
+              <div>
+              <%= f.label :contact %>
+              <%= f.text_field :contact, label_html:{class:"label"} %>
+              </div>
+              <div>
+              <%= f.label :email %>
+              <%= f.text_field :email, label_html:{class:"label"} %>
+            </div>
+           <%= f.label :username %>
+              <%= f.text_area :username, label_html:{class:"label"}%>
+              <%= f.label :location %>
+              <%= f.text_field :location, label_html:{class:"label"} %>
+              <%= f.label :avatar%>
+              <%= f.file_field :avatar, as: :file, label_html:{class:"label"}%>
+            
 
+            <div class="form-actions">
+              <%= f.button :submit %>
+            </div>
+            </div>
+
+      <% end %>
+    </div>
+
+  
+
+  <div class="form-actions-return">
+
+    <%= link_to 'Back', skills_path %>
+
+  </div>
 
 </div>
-
-
-
-
-<div class="form-actions-return">
-       <%= link_to 'Back', skills_path %>
-  </div>
 </div>
+  
+
 
 
 
