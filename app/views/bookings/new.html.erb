@@ -1,5 +1,9 @@
 <body>
 
+   <!--  <% if flash[:notice] %>
+    <div class="notice"><%= flash[:notice] %></div>
+  <% end %> -->
+
 <div class="booking-banner d-flex justify-content-center">
   <div class="booking-form-container">
    <h2>Book the skill you need</h2>
@@ -11,15 +15,17 @@
 <div class = "booking-form d-flex ml-3 mr-2">
     <div class="form-inputs-booking d-flex">
 <%= simple_form_for [@skill, @booking] do |f| %>
-<%= f.input :date %>
-
-
-
+<%= f.input :date, label:'Booking Date'%>
+<%= f.input :hoursbooked ,
+      hint: ("The input must be an integer"),
+      label:'Hours of skill needed' %>
+<%= f.input :date, label:'Booking Date'%>
 
 
   <div class="form-actions-booking d-flex justify-content-around">
     <%= f.button :submit, "Book"%>
     <%= link_to "Back",skill_path(@skill), class: "btn btn-lg btn-light"  %>
+
   </div>
     <% end %>
     </div>
