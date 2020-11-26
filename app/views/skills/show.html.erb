@@ -16,7 +16,7 @@
 <body>
 
   <div class= "form-actions-back-button">
-    <%= link_to "Back",skills_path, class: "btn btn-lg btn-light"  %>
+    <%= link_to "Back to skills list",skills_path, class: "btn btn-lg btn-light"  %>
   </div>
 
 <div class="skills-show-container">
@@ -74,11 +74,12 @@
         <div id="service-price">
           <p>Price: <%= @skill.price %> RMB/hr</p>
         </div>
-
-        <div class="service-book-button">
-          <p><%= link_to "Book", new_skill_booking_path(@skill) %></p>
+        <div style="margin-bottom: 10px;">
+          <%= link_to "Book", new_skill_booking_path(@skill), class:"service-book-button" %>
         </div>
-
+        <div>
+          <%= link_to "View all my services", user_path(@skill.user), class:"services-view-button" %>
+        </div>
   </div>
 
 

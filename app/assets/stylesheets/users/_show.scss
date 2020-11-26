@@ -4,9 +4,6 @@ body {
   background-color: #F7F7F7;
 }
 
-.form-actions-back-button {
-  margin-right: auto;
-}
 
 .users-show-container {
   max-width: 70vw;
@@ -256,13 +253,18 @@ body {
 }
 
 
+.booking-header .booking-skill p, .booking-name p{
+  color: black;
+}
 
 
+.booking-header .booking-name p{
+  color: black;
+}
 
-
-
-
-
+.booking-header .booking-date p{
+  color: black;
+}
 
 
 
