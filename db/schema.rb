@@ -10,10 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-
-
-
-ActiveRecord::Schema.define(version: 2020_11_25_155821) do
+ActiveRecord::Schema.define(version: 2020_11_26_103709) do
 
 
   # These are extensions that must be enabled in order to support this database
@@ -103,7 +100,7 @@ ActiveRecord::Schema.define(version: 2020_11_25_155821) do
     t.text "avatar"
     t.string "location"
     t.string "contact"
-    t.text "reviews"
+    t.text "background"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.boolean "admin"
