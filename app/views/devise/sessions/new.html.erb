@@ -7,24 +7,29 @@
 
 
 
-<h1>Log In</h1>
+<h2>Log In</h2>
 
 </div>
 <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
   <div class="centerj columnj">
+    <%= f.label :email, class: "labelj" %>
     <%= f.input_field :email,
-                required: false,
+                required: true,
                 autofocus: true,
                 input_html: { autocomplete: "email" }, class: "inputj" %>
+    <%= f.label :password, class: "labelj" %>
     <%= f.input_field :password,
-                required: false,
+                required: true,
                 input_html: { autocomplete: "current-password" }, class: "inputj" %>
     <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
   </div>
 
-  <div class="form-actions">
-    <%= f.button :submit, "Log in" %>
-  </div>
+    <div class="form-actions-log-in">
+      <%= f.button :submit, "Log in" %>
+    </div>
+    <div class= "form-actions-back-button">
+      <%= link_to "Back",root_path, class: "btn btn-lg btn-light"  %>
+    </div>
 <% end %>
 
 <div>

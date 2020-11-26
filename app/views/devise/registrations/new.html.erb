@@ -1,16 +1,16 @@
 <img id="background" src="https://images.unsplash.com/photo-1494947665470-20322015e3a8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80">
-<div class="container pt-5">
-  <div class = "row justify-content-center">
+<div class="sign-up container pt-5">
+  <div class = "sign-up-align row justify-content-center">
     <!-- style= "background-color: #006B53; opacity: 0.9; border-radius: 10px;" -->
      <div class = "col-12 col-md-6 col-lg-4">
 
 <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= f.error_notification %>
 
-<div class = "form">
+<div class = "sign-up-form form">
 
   <h2>Join SkillSwapper</h2>
-  <div class="form-inputs">
+  <div class="sign-up-form-inputs">
     <%= f.input :username,
                 required: true,
                 input_html: { class: "inputb" }
@@ -31,11 +31,11 @@
 
   <!-- </div> -->
 
-  <div class="form-actions">
+  <div class="sign-up-main-form-actions">
       <div class="form-actions-sign-up">
     <%= f.button :submit, "Sign up" %>
       </div>
-      <div class= "form-actions-back">
+      <div class= "form-actions-back-button">
     <%= link_to "Back",root_path, class: "btn btn-lg btn-light"  %>
      </div>
   </div>
@@ -43,7 +43,7 @@
 
 </div>
 
-<div class="link">
+<div class="sign-up-page-link">
 <%= render "devise/shared/links" %>
 </div>
     </div>
