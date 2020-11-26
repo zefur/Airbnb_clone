@@ -52,12 +52,13 @@ body {
 
 }
 
-#info-box-description > p {
+.info-box-description {
   //border: 1px solid black;
   text-align: left;
   font-family: 'Nunito', sans-serif;
   font-weight: 200;
-
+  color: black;
+  padding-bottom: 10px;
 }
 
 

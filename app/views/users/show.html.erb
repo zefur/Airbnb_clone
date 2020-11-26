@@ -27,10 +27,10 @@
 
 <div class="user-information">
       <h2>About me</h2>
-      <h3 id="info-box-name">First Name Last Name <%#= @skill.user.name %></h3>
-      <p id="info-box-description">endYore and once nothing upstarting still whose was metell, and plainly one this and my i angels, linking of for be came before dreams expressing and velvet, let in truly the my louder nothing doubting dreary, bird all the or whom sitting. Tis raven evermore bust volume aptly thinking pallid rustling all. This nepenthe and at was still nights. For but forgiveness and floating, unhappy my entrance shadow quoth that all then. The throws forgiveness whose heard dreaming maiden that denser heaven. Never me bosoms agreeing fiend the his such thou door, stillness at thee into books and no i.<%#= @skill.user.location %></p>
-      <p id="info-box-location">Location<%#= @skill.user.location %></p>
-      <p id="info-box-contact">phone number <%#= @skill.user.contact %></p>
+      <h3 id="info-box-name"><%= @user.name %></h3>
+      <p class="info-box-description">endYore and once nothing upstarting still whose was metell, and plainly one this and my i angels, linking of for be came before dreams expressing and velvet, let in truly the my louder nothing doubting dreary, bird all the or whom sitting. Tis raven evermore bust volume aptly thinking pallid rustling all. This nepenthe and at was still nights. For but forgiveness and floating, unhappy my entrance shadow quoth that all then. The throws forgiveness whose heard dreaming maiden that denser heaven. Never me bosoms agreeing fiend the his such thou door, stillness at thee into books and no i.<%#= @user.background %></p>
+      <p id="info-box-location"><%= @user.location %></p>
+      <p id="info-box-contact"><%= @user.contact %></p>
     </div>
 </div>
   <!--FIRST SECTION OF PAGE ENDS-->
@@ -43,30 +43,30 @@
 
     <!--services starts-->
     <div class="services-container">
-      <%# @user.skills.limit(3).each do |skill| %>
+      <% @user.skills.limit(3).each do |skill| %>
 
         <div class="one-service">
           <div class="one-service-info">
             <div class="one-service-name">
-              <p>Name <%#= skill.name %></p>
+              <p><%= skill.name %></p>
             </div>
             <div class="one-service-category">
-              <p>Type <%#= skill.skill_type %></p>
+              <p><%= skill.skill_type %></p>
             </div>
           </div>
 
           <div class="one-service-buttons">
-            <div class="one-service-view-button">
-              <%#= link_to "View", skill_path(skill) %>
+            <div>
+              <%= link_to "View", skill_path(skill), class:"one-service-view-button" %>
             </div>
 
-            <div class="one-service-book-button">
-            <%#= link_to "Book", new_skill_booking_path(skill)%>
+            <div>
+              <%= link_to "Book", new_skill_booking_path(skill), class:"one-service-book-button"%>
             </div>
           </div>
         </div>
 
-       <%# end %>
+       <% end %>
     </div>
 
 <!--
