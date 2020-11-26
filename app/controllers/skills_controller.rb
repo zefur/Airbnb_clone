@@ -12,6 +12,13 @@ class SkillsController < ApplicationController
     @skill = Skill.find(params[:id])
   end
 
+  def tagged
+    if params[:tag].present?
+      @skill = Skill.tagged_with(params[:tag])
+    else
+      @skill = Skill.all
+    end
+  end
   private
 
   def skills_params

@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   resources :bookings, only: [:index, :new, :create, :delete]
   resources :users, only: [:show, :edit, :update]
 
-  get '/tagged' to: 'skills#tagged', as: :tagged
+  get '/tagged', to: 'skills#tagged', as: :tagged
 
   namespace :api, defaults: {format: :json} do
     namespace :v1 do
