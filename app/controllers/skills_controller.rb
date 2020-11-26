@@ -13,8 +13,8 @@ class SkillsController < ApplicationController
     @skills = Skill.all
     @skills = policy_scope(Skill).order(created_at: :desc)
 
-    
-    
+
+
     @markers = @skills.geocoded.map do |skill|
       {
         lat: skill.latitude,
@@ -26,26 +26,26 @@ class SkillsController < ApplicationController
 
     # @skill = Skill.find(params[:tag_id])
   end
-  
+
   #GET /skills/new
   def new
     @skill = Skill.new
     authorize @skill
   end
-   
+
   #POST /skills
   def create
     @skill = Skill.new(skill_params)
     @skill.user = current_user
     authorize @skill
-   
+
     if @skill.save
-      redirect_to @skill, notice: 'Skill was successfully created.'
+      redirect_to @skill, notice: 'Whoop, whoop.Succesfully created skill👏'.
     else
       render :new
     end
   end
-  
+
   #GET /skills/:id
   def show
   end
