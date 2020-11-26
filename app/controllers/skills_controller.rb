@@ -13,8 +13,20 @@ class SkillsController < ApplicationController
     @skills = Skill.all
     @skills = policy_scope(Skill).order(created_at: :desc)
 
+    
+    
+    @markers = @skills.geocoded.map do |skill|
+      {
+        lat: skill.latitude,
+        lng: skill.longitude,
+        infoWindow: render_to_string(partial: "info_window", locals: { skill: skill }),
+        image_url: helpers.asset_url('coding.jpg')
+      }
+    end
+
     # @skill = Skill.find(params[:tag_id])
   end
+  
   #GET /skills/new
   def new
     @skill = Skill.new

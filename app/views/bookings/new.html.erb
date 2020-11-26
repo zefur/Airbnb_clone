@@ -1,6 +1,34 @@
-<%= simple_form_for [@skill, @booking] do |f|%>
-<%= f.input :date %>
-<%= f.submit %>
+<body>
 
-<% end %>
+<div class="booking-banner d-flex justify-content-center">
+  <div class="booking-form-container">
+   <h2>Book the skill you need</h2>
+    <p>
+      Skill provided by: <%= @skill.user.name%><br>
+      Hourly rate for <%= @skill.name %>: <%= @skill.price %> RMB
+    </p>
+
+<div class = "booking-form d-flex ml-3 mr-2">
+    <div class="form-inputs-booking d-flex">
+<%= simple_form_for [@skill, @booking] do |f| %>
+<%= f.input :date %>
+
+
+
+
+
+  <div class="form-actions-booking d-flex justify-content-around">
+    <%= f.button :submit, "Book"%>
+    <%= link_to "Back",skill_path(@skill), class: "btn btn-lg btn-light"  %>
+  </div>
+    <% end %>
+    </div>
+</div>
+
+      </div>
+    </div>
+
+
+</body>
+
 

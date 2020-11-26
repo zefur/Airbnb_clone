@@ -14,11 +14,12 @@ User.create(email:"jdhall@live.co.uk", password: "password", admin: true, name: 
 end
 
 20.times do
+    sleep(2)
     Skill.create(
         name: Faker::Hacker.ingverb,
         description: Faker::Lorem.paragraph(sentence_count: 3),
         price: Faker::Number.decimal(l_digits: 2),
-        skill_location: "china",
+        skill_location: Faker::Address.full_address,
         skill_type: ["DIY","Driving","Teaching","Animal care","Coding","Household chores"].sample,
         user_id: rand(1..11))
 end
