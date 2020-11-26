@@ -7,8 +7,12 @@ class SkillsController < ApplicationController
 
   #GET /skills
   def index
+
+#     @skills = params[:skill_type] ? Skill.filter(params[:skill_type]) : @skills = Skill.all
+
     @skills = Skill.all
     @skills = policy_scope(Skill).order(created_at: :desc)
+
     
     
     @markers = @skills.geocoded.map do |skill|
@@ -17,6 +21,7 @@ class SkillsController < ApplicationController
         lng: skill.longitude
       }
     end
+
     # @skill = Skill.find(params[:tag_id])
   end
   
@@ -43,6 +48,20 @@ class SkillsController < ApplicationController
   def show
   end
 
+
+  def tagged
+    if params[:tag].present?
+      @skills = Skill.tagged_with(params[:tag])
+    else
+      @skills = Skill.all
+    end
+  end
+  private
+
+  def skills_params
+    params.require(:skill).permit(:skill_type)
+  end
+
   #GET /skills/:id/edit
   def edit
   end
@@ -63,6 +82,7 @@ class SkillsController < ApplicationController
   end
 
   private
+
 
   def set_skill
     @skill = Skill.find(params[:id])
