@@ -1,157 +1,69 @@
-h1 {
-  text-align: center;
-  font-family: 'Roboto', sans serif;
-  font-weight: lighter;
+body {
+  margin: 0;
+  margin-bottom: 100px;
+  background-color: #F7F7F7;
+}
+
+.form-actions-back-button {
+  margin-right: auto;
+}
+
+.skills-show-container {
+  max-width: 70vw;
+  margin: 30px auto;
+  background-color: white;
 }
 
 .first-section {
-  display: flex;
-  justify-content: space-around;
-  margin-top: 50px;
   //border: 1px solid black;
+  display: flex;
+  justify-content: left;
+  margin-top: 0;
+  padding: 30px;
 }
 
-/*avatar customization starts*/
+
 //
-.avatar-container {
+// .avatar-container {
+//   border: 1px solid black;
+//   width: 300px;
+//   height: 300px;
+// }
+
+// .avatar-picture {
   //border: 1px solid black;
-  width: 300px;
-  height: 300px;
-  position: relative;
-  display: flex;
-}
+// }
 
-.avatar-green-background {
-  background-color: #869D74;
-  width: 250px;
-  height: 250px;
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  z-index: 0;
-}
-
-.avatar-name {
-  color: white;
-  z-index: 2;
-  position: absolute;
-  bottom: 0;
-  right: 50%;
-}
-
-.avatar-square {
-  z-index: 1;
-  width: 250px;
-  height: 250px;
-}
-
-/*avatar customization ends*/
-
-
-/*services-card customization starts*/
-
-.services-container {
+.user-information {
+  margin-left: 50px;
   //border: 1px solid black;
-  width: 500px;
-  height: 300px;
 }
 
-.services-card-container {
-  display: flex;
-  justify-content: space-between;
+.user-information > h2 {
+
+  font-family: 'Quicksand', sans-serif;
 }
 
-.services-card {
+
+#info-box-name {
   //border: 1px solid black;
-  margin: 10px;
-  width: 400px;
-  height: 50px;
-  display: flex;
-  justify-content: space-between;
-  box-shadow: 10px 10px 5px 0px rgba(0,0,0, 0.2);
-  background-color: white;
-  border-radius: 0 0 0 20px;
-  z-index: 1;
+  text-align: left;
 
 }
 
-.book-button {
-  //border-radius: 20px;
-  width: 70px;
-  height: 30px;
-  align-self: center;
-  margin-right: 5px;
-  box-shadow: 10px 10px 5px 0px rgba(0,0,0, 0.2);
-  background-color: #006A52;
-  color: white;
-  text-align: center;
-}
 
-.services-card .service-name {
+
+#info-box-location {
   //border: 1px solid black;
-  margin: 5px;
-  width: 300px;
-  height: 30px;
-  align-self: center;
-  color: #548D2D;
+  text-align: left;
+  color: black;
 }
 
-.services-card .service-category {
+#info-box-contact {
   //border: 1px solid black;
-  margin: 5px;
-  width: 150px;
-  height: 30px;
-  align-self: center;
-  color: lightgrey;
-  text-align: right;
+  text-align: left;
+  color: black;
 }
-
-.services-card-info {
-  //border: 1px solid black;
-  margin-left: 10px;
-  width: 400px;
-  height: 230px;
-  z-index: 0;
-  border-radius: 20px 0 0 0;
-  box-shadow: 10px 10px 5px 0px rgba(0,0,0, 0.2);
-  background-color: white;
-}
-
-.service-description {
-  //border: 1px solid black;
-  width: 100%;
-  height: 142px;
-  border-radius: 20px 0 0 0;
-  padding: 5px;
-}
-
-.service-area {
-  //border: 1px solid black;
-  display: flex;
-  justify-content: space-between;
-  border-top: 1px solid lightgrey;
-  height: 40px;
-  background-color: rgba(134,157,116, 0.4);
-
-}
-
-.service-area .service-location {
-  //border: 1px solid black;
-  padding: 5px;
-}
-
-.service-area .service-remote {
-  //border: 1px solid black;
-  padding: 5px;
-}
-
-.service-price {
-  //border: 1px solid black;
-  width: 100%;
-  padding: 5px;
-  height: 40px;
-}
-
 
 
 /*SECOND SECTION OF PAGE STARTS*/
@@ -163,66 +75,98 @@ h1 {
   margin-top: 50px;
 }
 
-.reviews-container {
+.service-box {
   //border: 1px solid black;
-  width: 300px;
-  height: 400px;
-  box-shadow: 10px 10px 5px 0px rgba(0,0,0, 0.2);
-  background-color: rgba(134,157,116, 0.4);
-  border-radius: 20px;
-  text-align: center;
+  margin: 10px;
+  padding-right: 20px;
+
 }
 
-.reviews-title {
-  padding: 10px;
-  height: 10%;
-  text-align: center;
-  border-radius: 20px 20px 0 0;
+// SERVICE below
+
+.service-box > p{
+  width: 500px;
+  height: 300px;
 }
 
-.reviews-box {
+#service-name  > p{
   //border: 1px solid black;
-  width: 100%;
-  height: 80%;
-  background-color: white;
   text-align: left;
-  padding: 10px;
+  color: black;
+  font-size: 30px;
+  border-bottom: 1px solid grey;
+
 }
 
-.reviews-info {
-  display: flex;
-  justify-content: space-between;
+#service-category  > p{
+  //border: 1px solid black;
+  text-align: left;
+  color: black;
+  font-weight: lighter;
+  margin-top: 5px;
 }
 
-.reviewer-name {
-  margin-bottom: 0;
-  padding-top: 5px;
-  font-size: smaller;
+#service-description  > p{
+  //border: 1px solid black;
+  text-align: left;
+  color: black;
+  font-weight: light;
 }
 
-.rating {
-  margin-bottom: 0;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  font-size: smaller;
+#service-location  > p{
+  //border: 1px solid black;
+  margin-top: 20px;
+  text-align: left;
+  color: black;
+  font-weight: lighter;
 }
 
-.review-description {
-  margin-bottom: 0;
-  padding-top: 10px;
-  padding-bottom: 5px;
-  font-size: smaller;
-  border-bottom: 2px solid #F5F5F5;
+#service-price  > p{
+  //border: 1px solid black;
+  text-align: left;
+  color: black;
+  font-weight: lighter;
 }
+
+.service-book-button {
+  //border: 1px solid black;
+  border-radius: 20px;
+  width: 100px;
+  height: 30px;
+  background-color: #006A52;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+}
+
+.service-book-button > p {
+  color: white;
+  text-align: center;
+  //border: 1px solid black;
+
+}
+
+#book-button:hover {
+  background-color: yellow;
+  color: #898b8a;
+}
+
+
+
+
+
+// SHOWCASE below
+
 
 
 .showcase-container {
   //border: 1px solid black;
   width: 600px;
   height: 400px;
-  box-shadow: 10px 10px 5px 0px rgba(0,0,0, 0.2);
+  //box-shadow: 10px 10px 5px 0px rgba(0,0,0, 0.2);
   background-color: rgba(134,157,116, 0.4);
   border-radius: 20px;
+  margin-right: 10px;
 
 }
 

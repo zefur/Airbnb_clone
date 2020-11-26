@@ -3,67 +3,63 @@
 
   <!--navbar ends-->
 
-  <h1>About me</h1>
 
-  <div class="first-section">
+  <!--FIRST SECTION OF PAGE STARTS-->
+<div class="first-section">
 
-    <!--avatar starts-->
-    <div class="avatar-container">
+    <div class="avatar-picture">
       <%= image_tag "https://kitt.lewagon.com/placeholder/users/krokrob", class: "avatar-square", alt: "avatar-square" %>
-
-      <div class="avatar-green-background">
-      </div>
-
-      <div class="avatar-name">
-        <p><%= @user.name %></p>
-      </div>
     </div>
-    <!--avatar ends-->
 
-    <!--services starts-->
-    <div class="services-container">
-      <% @user.skills.limit(3).each do |skill| %>
-      <div class="services-card-container">
-        
-        <div class="services-card">
-        
-          <div class="service-name">
-          
-            <p><%= skill.name %></p>
-          </div>
-          
-          <div class="service-category">
-           <p><%= skill.skill_type %>
-          </div>
-          
-        </div>
-
-        <div class="view-button">
-          <%= link_to "View", skill_path(skill) %>
-        </div>
-
-        <div class="book-button">
-         <%#= link_to "Book", new_skill_booking_path(skill)%>
-        </div>
-        
-      </div>
-       <% end %>
+    <div class="user-information">
+      <h3 id="info-box-name"><%= @user.name %></h3>
+      <p id="info-box-location">Location<%= @user.location %></p>
+      <p id="info-box-contact">phone number <%= @user.contact %></p>
     </div>
-   
-    <!--services ends-->
-  </div>
+</div>
+  <!--FIRST SECTION OF PAGE ENDS-->
+
+
+
+  <!--SECOND SECTION OF PAGE STARTS-->
 
   <div class="second-section">
 
-    <!--contact-container starts-->
-    <div class="contact-container">
-      <p>Contact Info</p>
-      <div class="contact-info">
-        <p><%= @user.contact %>  </p>
-      </div>
+    <!--services starts-->
+    <div class="services-container">
+      <%# @user.skills.limit(3).each do |skill| %>
+
+        <div class="one-service">
+          <div class="one-service-info">
+            <div class="one-service-name">
+              <p>Name <%#= skill.name %></p>
+            </div>
+            <div class="one-service-category">
+              <p>Type <%#= skill.skill_type %></p>
+            </div>
+          </div>
+
+          <div class="one-service-buttons">
+            <div class="one-service-view-button">
+              <%#= link_to "View", skill_path(skill) %>
+            </div>
+
+            <div class="one-service-book-button">
+            <%#= link_to "Book", new_skill_booking_path(skill)%>
+            </div>
+          </div>
+        </div>
+
+       <%# end %>
     </div>
 
-    <!--contact-container ends-->
+<!--
+
+-->
+
+
+
+    <!--services ends-->
 
     <!-- booking-container starts-->
     <div class="booking-container">
@@ -104,7 +100,7 @@
 
   </div>
 
-
+  <!--SECOND SECTION OF PAGE ENDS-->
 
 
 

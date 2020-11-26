@@ -1,4 +1,6 @@
-
+<head>
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap" rel="stylesheet">
+</head>
   <!--navbar starts-->
   <%= render "shared/nav" %>
 
@@ -7,72 +9,34 @@
   <!--navbar ends-->
 
   <!--PAGE HEADING-->
-<h1>About my service</h1>
+<!--<div class="skils-show-heading">
+  <h3>About my service</h3>
+</div>-->
   <!--PAGE HEADING-->
+<body>
+
+  <div class= "form-actions-back-button">
+    <%= link_to "Back",skills_path, class: "btn btn-lg btn-light"  %>
+  </div>
+
+<div class="skills-show-container">
+
 
 
   <!--FIRST SECTION OF PAGE STARTS-->
 <div class="first-section">
 
-    <!--avatar starts-->
-    <div class="avatar-container">
+    <div class="avatar-picture">
       <%= image_tag "https://kitt.lewagon.com/placeholder/users/krokrob", class: "avatar-square", alt: "avatar-square" %>
-
-      <div class="avatar-green-background">
-      </div>
-
-      <div class="avatar-name">
-        <p><%= @skill.user.name %></p>
-      </div>
-    </div>
-    <!--avatar ends-->
-
-    <!--services starts-->
-    <div class="services-container">
-
-      <div class="services-card-container">
-        <div class="services-card a">
-          <div class="service-name">
-            <p><%= @skill.name  %></p>
-          </div>
-
-
-
-          <div class="service-category">
-            <p><%= @skill.skill_type %></p>
-          </div>
-        </div>
-
-        <div class="book-button">
-          <%= link_to "Book", new_skill_booking_path(@skill) %>
-        </div>
-      </div>
-
-      <!--service info card starts-->
-      <div class="services-card-info">
-        <div class="service-description">
-        <p><%= @skill.description %></p>
-        </div>
-
-        <div class= "service-area">
-          <div class="service-location">
-            <p><%= @skill.user.location %></p>
-          </div>
-          <div class="service-remote">
-            <p><%= @skill.remote %></p>
-          </div>
-        </div>
-
-
-        <div class="service-price">
-          <p><%= @skill.price %></p>
-        </div>
-
-      </div>
     </div>
 
-
-    <!--services ends-->
+    <div class="user-information">
+      <h2>About me</h2>
+      <h3 id="info-box-name">First Name Middle Name Last Name <%= @skill.user.name %></h3>
+      <p id="info-box-location">endYore and once nothing upstarting still whose was metell, and plainly one this and my i angels, linking of for be came before dreams expressing and velvet, let in truly the my louder nothing doubting dreary, bird all the or whom sitting. Tis raven evermore bust volume aptly thinking pallid rustling all. This nepenthe and at was still nights. For but forgiveness and floating, unhappy my entrance shadow quoth that all then. The throws forgiveness whose heard dreaming maiden that denser heaven. Never me bosoms agreeing fiend the his such thou door, stillness at thee into books and no i.<%#= @skill.user.location %></p>
+      <p id="info-box-location">Location<%#= @skill.user.location %></p>
+      <p id="info-box-contact">phone number <%#= @skill.user.contact %></p>
+    </div>
 </div>
   <!--FIRST SECTION OF PAGE ENDS-->
 
@@ -82,53 +46,44 @@
   <!--SECOND SECTION OF PAGE STARTS-->
 <div class="second-section">
 
-    <!--reviews-container starts-->
-    <div class="reviews-container">
-      <div class="reviews-title">
-        <p>Reviews</p>
-      </div>
+  <!--services starts-->
 
-      <div class="reviews-box">
+  <div class="service-box">
 
-        <!--Review no. 1 start-->
 
-        <div class="reviews-info">
-          <div class="reviewer-name">
-            <p>(name)</p>
-          </div>
-
-          <div class="rating">
-            <p>(rating)</p>
-          </div>
+        <div id="service-name">
+          <p><%= @skill.name  %></p>
         </div>
 
-        <div class="review-description">
-          <p> (review description) </p>
-        </div>
-        <!--Review no. 1 end-->
-
-        <!--Review no. 2 start-->
-
-        <div class="reviews-info">
-          <div class="reviewer-name">
-            <p>(name)</p>
-          </div>
-
-          <div class="rating">
-            <p>(rating)</p>
-          </div>
+        <div id="service-category">
+          <p>Type: <%= @skill.skill_type %></p>
         </div>
 
-        <div class="review-description">
-          <p> (review description) </p>
+        <div id="service-description">
+          <p><%= @skill.description %></p>
         </div>
 
-        <!--Review no. 2 end-->
+        <div id="service-location">
+          <p>Location: <%= @skill.user.location %></p>
+        </div>
 
-      </div>
-    </div>
+        <div id="service-remote">
+          <p><%= @skill.remote %></p>
+        </div>
 
-    <!--reviews-container ends-->
+        <div id="service-price">
+          <p>Price: <%= @skill.price %> RMB</p>
+        </div>
+
+        <div class="service-book-button">
+          <p><%= link_to "Book", new_skill_booking_path(@skill) %></p>
+        </div>
+
+  </div>
+
+
+    <!--services ends-->
+
 
     <!-- showcase-container starts-->
     <div class="showcase-container">
@@ -151,5 +106,6 @@
 
 </div>
   <!--SECOND SECTION OF PAGE ENDS-->
-
+</div>
+</body>
 
