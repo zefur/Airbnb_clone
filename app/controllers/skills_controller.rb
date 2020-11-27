@@ -40,7 +40,7 @@ class SkillsController < ApplicationController
     authorize @skill
 
     if @skill.save
-      redirect_to @skill, notice: 'Whoop, whoop.Succesfully created skill👏'.
+      redirect_to @skill, notice: 'Congrats! Succesfully created skill👏'.
     else
       render :new
     end

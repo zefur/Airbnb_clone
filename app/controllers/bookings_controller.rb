@@ -9,7 +9,7 @@ before_action :set_skill
     @booking.user_id = current_user.id
     @booking.skill = @skill
     if @booking.save
-      redirect_to skill_path(@skill), notice: 'Whoop, whoop. Succesfully created booking👏'
+      redirect_to skill_path(@skill), notice: 'Fabulous! Succesfully created booking👏'
     else
       render "new", notice: 'it seems something went wrong, try again'
     end
