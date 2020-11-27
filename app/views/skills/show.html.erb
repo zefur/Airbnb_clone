@@ -27,15 +27,15 @@
 <div class="first-section">
 
     <div class="avatar-picture">
-     <% if @skill.user.avatar.attached? %>
-      <%= cl_image_tag @skill.user.avatar.key, height:300, width:300 %> 
+     <% if @user.avatar.attached? %>
+      <%= cl_image_tag @user.avatar.key, height:300, width:300 %> 
          <%end%>
     </div>
 
     <div class="user-information">
       <h2>About me</h2>
       <h3 id="info-box-name"><%= @skill.user.name %></h3>
-      <p class="info-box-description">endYore and once nothing upstarting still whose was metell, and plainly one this and my i angels, linking of for be came before dreams expressing and velvet, let in truly the my louder nothing doubting dreary, bird all the or whom sitting. Tis raven evermore bust volume aptly thinking pallid rustling all. This nepenthe and at was still nights. For but forgiveness and floating, unhappy my entrance shadow quoth that all then. The throws forgiveness whose heard dreaming maiden that denser heaven. Never me bosoms agreeing fiend the his such thou door, stillness at thee into books and no i.<%#= @skill.user.description %></p>
+      <p class="info-box-description"><%= @skill.user.description %></p>
       <p id="info-box-location"><%= @skill.user.location %></p>
       <p id="info-box-contact"><%= @skill.user.contact %></p>
     </div>
