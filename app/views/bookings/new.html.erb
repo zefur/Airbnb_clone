@@ -17,9 +17,9 @@
 <%= simple_form_for [@skill, @booking] do |f| %>
 <%= f.input :date, label:'Booking Date'%>
 <%= f.input :hoursbooked ,
-      hint: ("The input must be an integer"),
+      hint: ("The input must be a number"),
       label:'Hours of skill needed' %>
-<%= f.input :date, label:'Booking Date'%>
+
 
 
   <div class="form-actions-booking d-flex justify-content-around">
