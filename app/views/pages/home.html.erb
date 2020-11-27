@@ -34,42 +34,42 @@
         <div class= "navigation-bar">
             <div class= "navigation-bar-icons row align-items-center ">
 
-            <%= link_to '#', class: "col-5 mt-2 pt-2 pb-2"   do  %>
+            <%= link_to tagged_path(tag: "Driving"), class: "col-5 mt-2 pt-2 pb-2"   do  %>
                <div>
                   <%= image_tag('steering-wheel.png', height: '45', width: '45') %>
                   <p>Driving</p>
                </div>
             <% end %>
 
-            <%= link_to '#', class: "col-5 mt-2 pt-2 pb-2"  do  %>
+            <%= link_to tagged_path(tag: "DIY"), class: "col-5 mt-2 pt-2 pb-2"  do  %>
               <div >
                 <%= image_tag('tools-2.png', height: '45', width: '45') %>
                  <p>DIY</p>
               </div>
             <% end %>
 
-            <%= link_to '#', class: "col-5 mt-2 pt-2 pb-2"  do  %>
+            <%= link_to tagged_path(tag: 'Coding'), class: "col-5 mt-2 pt-2 pb-2"  do  %>
               <div >
                 <%= image_tag('rest-api.png', height: '45', width: '45') %>
                  <p>Coding</p>
               </div>
             <% end %>
 
-            <%= link_to '#', class: "col-5 mt-2 pt-2 pb-2" do  %>
+            <%= link_to tagged_path(tag: "Chores"), class: "col-5 mt-2 pt-2 pb-2" do  %>
                <div>
                    <%= image_tag('dishes.png', height: '45', width: '45') %>
                  <p>Chores </p>
               </div>
             <% end %>
 
-            <%= link_to '#', class: "col-5 mt-2 pt-2 pb-2"  do  %>
+            <%= link_to tagged_path(tag: "Teaching"), class: "col-5 mt-2 pt-2 pb-2"  do  %>
               <div>
                 <%= image_tag('e-learning.png', height: '45', width: '45') %>
                  <p>Teaching</p>
               </div>
             <% end %>
 
-            <%= link_to '#', class: "col-5 mt-2 pt-2 pb-2"  do  %>
+            <%= link_to tagged_path(tag: "Gardening"), class: "col-5 mt-2 pt-2 pb-2"  do  %>
                 <div>
                    <%= image_tag('flowers-garden.png', height: '45', width: '45') %>
                  <p>Gardening</p>
@@ -77,28 +77,28 @@
             <% end %>
 
 
-          <%= link_to '#', class: "col-5 mt-2 pt-2 pb-2 "  do  %>
+          <%= link_to tagged_path(tag: "Craftword"), class: "col-5 mt-2 pt-2 pb-2 "  do  %>
               <div>
                 <%= image_tag('pencil-ruler.png', height: '45', width: '45') %>
                  <p>Craftwork</p>
               </div>
             <% end %>
 
-            <%= link_to '#', class: "col-5 mt-2 pt-2 pb-2"  do  %>
+            <%= link_to "Pet care", class: "col-5 mt-2 pt-2 pb-2"  do  %>
                 <div>
                    <%= image_tag('paw.png', height: '45', width: '45') %>
                  <p>Pet care</p>
               </div>
             <% end %>
 
-             <%= link_to '#', class: "col-5 mt-2 pt-2 pb-2"  do  %>
+             <%= link_to tagged_path(tag: "Baby care"), class: "col-5 mt-2 pt-2 pb-2"  do  %>
               <div>
                 <%= image_tag('baby-face.png', height: '45', width: '45') %>
                  <p>Baby care</p>
               </div>
             <% end %>
 
-            <%= link_to '#', class: "col-5 mt-2 pt-2 pb-2"  do  %>
+            <%= link_to tagged_path(tag: "Art"), class: "col-5 mt-2 pt-2 pb-2"  do  %>
                 <div>
                    <%= image_tag('art.png', height: '45', width: '45') %>
                  <p>Art</p>
