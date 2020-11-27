@@ -15,6 +15,10 @@
                 required: true,
                 input_html: { class: "inputb" }
                 %>
+    <%= f.input :name,
+                require: true,
+                input_html: { class: "inputb", autocomplete: "name" } 
+                %>
     <%= f.input :email,
                 required: true,
                 autofocus: true,

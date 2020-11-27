@@ -10,11 +10,11 @@
   <div class="page-wrapper">
     <div class="skill-home-page row">
 
-      <!--Start Column 1: Left for content -->
+      <!-- Start Column 1: Left for content -->
       <div class="skill-home-page-collumn double-column">
 
         <!--Start White Column -->
-        <div class="white-column">
+       <div class="white-column">
           <div class="first-title">
             <h2>Book your services</h2>
           </div>
@@ -22,7 +22,7 @@
             <h2>TEACHING</h2>
           </div>
         </div>
-        <!--End White Column -->
+        <!-- End White Column -->
 
         <!--Start Cards Display-->
         <div class="cards-display">
@@ -36,7 +36,7 @@
               </div>
 
               <div class="skill-home-page-book-button">
-                <%= link_to "View", skill_path(skill) %>
+                 <%= link_to "View", skill_path(skill) %>
               </div>
             </div>
             <div class="card-product-infos">
@@ -46,14 +46,14 @@
 
               <div class="card-skill">
                 <h2><%= skill.name %></h2>
-              </div>
+             </div>
 
               <div class="card-location">
                 <div class="price">
                   <p style="text-align: right">$<%= skill.price %></p>
                 </div>
                 <div class="location">
-                  <p style="text-align: right"><%= skill.skill_location %></p>
+                  <p style="text-align: right"><%#= skill.skill_location %></p>
                 </div>
               </div>
 
@@ -63,7 +63,6 @@
             </div>
 
           </div>
-
           <% end %>
 
           <!--End one card-->
@@ -82,7 +81,7 @@
           style="width: 100%; height: 600px;"
           data-markers="<%= @markers.to_json %>"
           data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
-          </div>  
+          </div>
       </div>
       <!--End Column 2: Right for map-->
     </div>
@@ -96,6 +95,17 @@
 
   <!--end of page-wrapper class-->
 </body>
+
+
+
+
+<!--  -->
+
+
+
+
+
+
 
 
 

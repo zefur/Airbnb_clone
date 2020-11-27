@@ -9,7 +9,7 @@
    <h2>Book the skill you need</h2>
     <p>
       Skill provided by: <%= @skill.user.name%><br>
-      Hourly rate for <%= @skill.name %>: <%= @skill.price %> RMB
+      Hourly rate for <%= @skill.name %>: <span id="price"><%= @skill.price %></span> RMB
     </p>
 
 <div class = "booking-form d-flex ml-3 mr-2">
@@ -18,11 +18,17 @@
 <%= f.input :date, label:'Booking Date'%>
 <%= f.input :hoursbooked ,
       hint: ("The input must be an integer"),
+      :input_html => {:id => "hours",:value => "0" },
       label:'Hours of skill needed' %>
-<%= f.input :date, label:'Booking Date'%>
+<%= f.input :totalrate ,
+      label:'Total price(RMB)',
+      :input_html => {:id => "rate",:value => "0" }
+      %>
 
+     
 
   <div class="form-actions-booking d-flex justify-content-around">
+   <!-- <button type="button" onclick="calculatePrice()">Calculate Price</button> -->
     <%= f.button :submit, "Book"%>
     <%= link_to "Back",skill_path(@skill), class: "btn btn-lg btn-light"  %>
 
