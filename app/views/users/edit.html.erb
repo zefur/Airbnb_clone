@@ -1,71 +1,184 @@
 <!--navbar starts-->
-  <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
-    <%= link_to "skillSWAPPER", class: "navbar-brand" %>
-      <%#= image_tag "tools.png" %>
-    <%# end %>
-
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+<%= render 'shared/nav' %>
 
 
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-          <%= link_to "Categories", "#", class: "nav-link" %>
-        </li>
-        <li class="nav-item">
-          <%= link_to "Sign up/Sign in/Profile", "#", class: "nav-link" %>
-        </li>
-         <li class="nav-item">
-          <%= link_to "Log out", "#", class: "nav-link" %>
-        </li>
-      </ul>
-    </div>
-  </div>
 
-  <div class = "container">
-  <div style="display: flex;">
-    <!-- Left content -->
-    <div style="flex: 1;">
-         <div class= "d-flex flex-column align-items-center ml-4" style="border-right: 1px solid black" >
-          <h3>User profile</h3>
-          <%= image_tag "https://images.unsplash.com/photo-1569913486515-b74bf7751574?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=670&q=80", class: "avatar-round", alt: "avatar-round" %>
-           <%= link_to "+ Edit Photo", new_user_session_path %>
-        </div>
-      </div>
-    </div>
 
-  <div style="flex: 1.5;">
-     <div clas = "row justify-content-center">
-<!--     <div class = "col-12 col-md-6 col-lg-4">
- --><div class = "form">
-      <%= simple_form_for(@user) do |f| %>
-      <%= f.error_notification %>
-        <div class="form-inputs">
-           <%= f.input :name, label_html:{class:"label"} %>
-           <%= f.input :contact, label_html:{class:"label"} %>
-           <%= f.input :email, label_html:{class:"label"} %>
-        </div>
 
-        <div class="form-actions">
-        <%= f.button :submit %>
-        <%= link_to '+ Add skill', new_skill_path %>
-      </div>
-   <% end %>
+
+
+<div class= "row">
+
+  <div class='col-3 justify-content-center align-self-end' style="background-color: blue; height: 100vh">
+    <h3>User profile</h3>
+
+    <%= image_tag "https://images.unsplash.com/photo-1569913486515-b74bf7751574?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=670&q=80", class: "thumbnail", alt: "avatar-round" %>
+
+    <%= link_to "+ Edit Photo", new_user_session_path %>
 
   </div>
+  
+  <div class= 'col-9' style='background-color: yellow; height: 100vh'>
+    <div style="border: black solid 3px; height: 50vh" >
+      <%= form_for @user do |f| %>
+       
+          <div class="form-row">
+
+            <div class="col-6 a">
+            <div>
+              <div>
+                <%= f.label :name %>
+              </div>
+              <div>
+                <%= f.text_field :name, class:"edit-form" %>
+              </div>
+            </div>
+              
+            
+            <div>
+              <div>
+                <%= f.label :contact %>
+              </div>
+              <div>
+                <%= f.text_field :contact, class:"edit-form" %>
+              </div>
+            </div>
+            <div>
+              <div>
+                <%= f.label :email %>
+              </div>
+              <div>
+                <%= f.text_field :email, class:"edit-form" %>
+              </div>
+            </div>
+            </div>
 
 
+           <div class="col-6 ">
+           
+            <div>
+              <div>
+                <%= f.label :username %>
+              </div>
+              <div>
+                <%= f.text_field :username, class:"edit-form" %>
+              </div>
+            </div>
+              
+            <div>
+              <div>
+                <%= f.label :location %>
+              </div>
+              <div>
+                <%= f.text_field :location,class:"edit-form" %>
+              </div>
+            </div>
+            <div class="col-6 a">
+            <div>
+              <div>
+                <%= f.label :avatar%>
+              </div>
+              <div>
+                <%= f.file_field :avatar, as: :file%>
+              </div>
+            </div>
+              
+
+            <div class="form-actions">
+              <%= f.button :submit %>
+            </div>
+            </div>
+         </div>
+      <% end %>
+    </div>
 </div>
 
 
+<div class= 'col' style='background-color: green; height: 50vh '>
+
+  <%= form_for(@user) do |f| %>
 
 
-<div class="form-actions-return">
-       <%= link_to 'Back', skills_path %>
+  <div class="form-actions-return">
+
+    <%= link_to 'Back', skills_path %>
+
   </div>
+      <div class="form-inputs">
+        <div class="row">
+
+          <div class="col-6 a">
+            <div>
+              <div>
+                <%= f.label :name %>
+              </div>
+              <div>
+                <%= f.text_field :name %>
+              </div>
+            </div>
+
+            <div>
+              <div>
+                <%= f.label :background %>
+              </div>
+              <div>
+                <%= f.text_area :background %>
+              </div>
+            </div>
+          </div>
+
+
+        <div class="col-6 b">
+          <div>
+            <div>
+                <%= f.label :name %>
+              </div>
+              <div>
+                <%= f.text_field :name %>
+              </div>
+          </div>
+          <div>
+            <div>
+                <%= f.label :name %>
+              </div>
+              <div>
+                <%= f.text_field :name %>
+              </div>
+          </div>
+          <div>
+            <div>
+                <%= f.label :name %>
+              </div>
+              <div>
+                <%= f.text_field :name %>
+              </div>
+          </div>
+          <div>
+            <div>
+              <%= f.label :photo %>
+            </div>
+            <div>
+              <%= f.file_field :photo %>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    <div class="form-actions">
+      <%= f.button :submit, :class => "form-button"%>
+      <%= f.submit :submit, :class => "form-button"%>
+      <%= link_to "Back", :back, class: "btn btn-lg btn-light"%>
+    </div>
+  </div>
+
+  <% end %>
+  </div>
+</div></div>
 </div>
+</div>
+  
+
 
 
 

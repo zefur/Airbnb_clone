@@ -37,3 +37,13 @@ font-weight: bold;
 .form-actions-return{
   text-align: center;
 }
+
+.edit-form {
+  width: 300px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  margin-top: 5px;
+}
+edit-form:focus {
+  background-color: grey;
+}
