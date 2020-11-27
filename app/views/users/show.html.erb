@@ -22,7 +22,9 @@
 <div class="first-section">
 
     <div class="avatar-picture">
-      <%= image_tag "https://kitt.lewagon.com/placeholder/users/krokrob", class: "avatar-square", alt: "avatar-square" %>
+    <% if @user.avatar.attached? %>
+      <%= cl_image_tag @user.avatar.key, height:300, width:300 %>
+    <%end%>
     </div>
 
 <div class="user-information">

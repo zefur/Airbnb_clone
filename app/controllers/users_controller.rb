@@ -17,13 +17,15 @@ class UsersController < ApplicationController
   # end
 
   def edit
-    @user = User.find(params[:id])
+   
+    @user.avatar.attach(params[:avatar])
     authorize @user
   end
 
   def update
-    @user = User.find(params[:id])
+    
     @skill = Skill.new
+
     @user.update(user_params)
     redirect_to user_path(@user)
   end
@@ -32,7 +34,7 @@ class UsersController < ApplicationController
   private
 
     def set_user
-    @user = User.find(params[:id])
+    @user = current_user
     authorize @user
     end
 
