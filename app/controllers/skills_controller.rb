@@ -8,7 +8,7 @@ class SkillsController < ApplicationController
   #GET /skills
   def index
 
-#     @skills = params[:skill_type] ? Skill.filter(params[:skill_type]) : @skills = Skill.all
+#     @skills = params[:tag] ? Skill.filter(params[:tag]) : @skills = Skill.all
 
     @skills = Skill.all
     @skills = policy_scope(Skill).order(created_at: :desc)
@@ -40,7 +40,9 @@ class SkillsController < ApplicationController
     authorize @skill
 
     if @skill.save
+
       redirect_to @skill, notice: 'Congrats! Succesfully created skill👏'.
+
     else
       render :new
     end
@@ -61,7 +63,7 @@ class SkillsController < ApplicationController
   private
 
   def skills_params
-    params.require(:skill).permit(:skill_type)
+    params.require(:skill).permit(:tag)
   end
 
   #GET /skills/:id/edit
@@ -92,6 +94,6 @@ class SkillsController < ApplicationController
   end
 
   def skill_params
-    params.require(:skill).permit(:name, :description, :price, :skill_location, :skill_type, :remote)
+    params.require(:skill).permit(:name, :description, :price, :skill_location, :tag, :tag_list, :remote)
   end
 end

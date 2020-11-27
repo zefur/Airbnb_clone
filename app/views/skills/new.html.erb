@@ -39,10 +39,11 @@
         <div class="col-6 b">
           <div>
             <div>
-              <%= f.label :skill_location %>
+
+              <%= f.label :tag %>
             </div>
             <div>
-              <%= f.text_field :skill_location %>
+              <%= f.text_field :tag %>
             </div>
           </div>
           <div>
@@ -70,6 +71,13 @@
             </div>
           </div>
         </div>
+        <div>
+              <%= f.label :tag %>
+            </div>
+            <div>
+              <%= f.select(:tag_list, %w[Driving DIY Coding Chores Teaching Gardening Craftwork Pet\ care Baby\ care Art] ) %>
+            </div>
+          </div>
 
       </div>
 
