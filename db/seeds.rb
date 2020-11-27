@@ -20,7 +20,7 @@ end
         description: Faker::Lorem.paragraph(sentence_count: 3),
         price: Faker::Number.decimal(l_digits: 2),
         skill_location: Faker::Address.full_address,
-        skill_type: ["DIY","Driving","Teaching","Animal care","Coding","Household chores"].sample,
+        tag: ["DIY","Driving","Teaching","Animal care","Coding","Household chores"].sample,
         user_id: rand(1..11),
         tag_list: ["DIY","Driving","Teaching","Animal care","Coding","Household chores"].sample)
 end

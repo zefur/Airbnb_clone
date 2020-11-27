@@ -6,7 +6,7 @@ class CreateSkills < ActiveRecord::Migration[6.0]
       t.references :user, null: false, foreign_key: true
       t.string :skill_location
       t.boolean :remote
-      t.string :skill_type
+      t.string :tag
       t.decimal :price
 
       t.timestamps
