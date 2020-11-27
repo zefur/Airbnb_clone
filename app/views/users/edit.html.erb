@@ -18,18 +18,24 @@
     <div class="profile-edit-page-title">
       <h3>User profile</h3>
     </div>
-    <div class="thumbnail" >
-    <%= image_tag "https://images.unsplash.com/photo-1569913486515-b74bf7751574?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=670&q=80", class: "profiles-img", alt: "avatar-round" %>
-    </div>
-    <%= link_to "+ Edit Photo", new_user_session_path, class: "edit-profile-page-button" %>
-    <%= link_to "Back", :back, class: "back-button-on-edit-page"%>
+ <div class="avatar-picture-profile-edit">
+    <% if @user.avatar.attached? %>
+      <%= cl_image_tag @user.avatar.key, height:300, width:300 %>
+    <%end%>
+    </div>    <%= link_to "Back", :back, class: "back-button-on-edit-page"%>
     <div>
 
     </div>
   </div>
 
   <div class= 'col-9' style='height: 100vh'>
+
     <div style="padding-top: 40px;  height: 50vh" >
+
+      <div style="padding-bottom: 20px">
+        <p>Info</p>
+      </div>
+
       <%= form_for @user do |f| %>
 
           <div class="form-row">
@@ -71,7 +77,6 @@
 
 
            <div class="col-6 ">
-
             <div>
               <div>
                 <%= f.label :username %>
@@ -92,7 +97,7 @@
             <div class="col-6 a">
             <div>
               <div>
-                <%= f.label :avatar, class:"choose-avatar-label"%>
+                <%= f.label :avatar, 'Profile picture', class:"choose-avatar-label"%>
               </div>
               <div>
                 <%= f.file_field :avatar, as: :file, class:"choose-avatar-input"%>
@@ -108,7 +113,10 @@
       <% end %>
     </div>
 </div>
-<div style="margin-top: 15px">
+<div style="margin-top: 30px">
+    <div style="padding-bottom: 20px">
+      <p>Services</p>
+    </div>
 <%= render 'shared/edit_profile' %>
 </div>
 

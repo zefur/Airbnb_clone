@@ -1,8 +1,13 @@
-h1 {
+.new-skill-container {
+  margin: 0 auto;
+  width: 700px;
+}
+
+.new-skill-container > h1 {
   font-family: 'Montserrat', sans-serif;
-  font-weight: 800;
+  font-weight: 200;
   color: #006A52;
-  text-decoration: underline;
+  text-align: center;
 }
 
 .skill-form-container {
@@ -14,12 +19,14 @@ h1 {
 }
 
 .form-inputs .col-6 {
-  border: 1px solid black;
+  //border: 1px solid black;
   //margin-left: 20px;
   //padding-left: 20px;
 }
 
-
+.input-photo {
+  color: grey;
+}
 
 
 //.skill-form-container > .form-inputs {
