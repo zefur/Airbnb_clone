@@ -9,8 +9,9 @@
 
 <body>
 
-  <div class= "form-actions-back-button">
+  <div class= "form-actions-back-button d-flex justify-content-between">
     <%= link_to "Back to skills list",skills_path, class: "btn btn-lg btn-light"  %>
+    <%= link_to "Edit Profile", edit_user_path(@current_user), class: "btn btn-lg btn-light"  %>
   </div>
 
 <div class="users-show-container">
