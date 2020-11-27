@@ -7,20 +7,5 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 require 'faker'
 
-User.create(email:"jdhall@live.co.uk", password: "password", admin: true, name: "James Hall")
+User.create(email:"jdhall@live.co.uk", password: "password", admin: true, name: "James Hall", username:"Jammy",contact:Faker::Company.duns_number)
 
-10.times do 
-    User.create(email:Faker::Internet.unique.email, password: "password", name: Faker::Name.name, username: Faker::Internet.username, contact:Faker::Company.duns_number )
-end
-
-20.times do
-    sleep(2)
-    Skill.create(
-        name: Faker::Hacker.ingverb,
-        description: Faker::Lorem.paragraph(sentence_count: 3),
-        price: Faker::Number.decimal(l_digits: 2),
-        skill_location: Faker::Address.full_address,
-        tag: ["DIY","Driving","Teaching","Animal care","Coding","Household chores"].sample,
-        user_id: rand(1..11),
-        tag_list: ["DIY","Driving","Teaching","Animal care","Coding","Household chores"].sample)
-end

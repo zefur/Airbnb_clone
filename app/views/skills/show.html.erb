@@ -27,7 +27,9 @@
 <div class="first-section">
 
     <div class="avatar-picture">
-      <%= image_tag "https://kitt.lewagon.com/placeholder/users/krokrob", class: "avatar-square", alt: "avatar-square" %>
+     <% if @skill.user.avatar.attached? %>
+      <%= cl_image_tag @skill.user.avatar.key, height:300, width:300 %> 
+         <%end%>
     </div>
 
     <div class="user-information">
@@ -89,7 +91,13 @@
     <!-- showcase-container starts-->
     <div class="showcase-container">
         <h2>Showcased work</h2>
-
+     <% if @skill.photos.attached? %>
+       <% @skill.photos.each do |a| %>
+       <%= cl_image_tag a.key, height:300, width:300 %> 
+         <%end%>
+        
+        <% end %>
+        
 
         <div class="image-holder">
         </div>

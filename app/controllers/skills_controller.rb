@@ -39,11 +39,12 @@ class SkillsController < ApplicationController
     @skill.user = current_user
     authorize @skill
 
-    if @skill.save
-
-      redirect_to @skill, notice: 'Congrats! Succesfully created skill👏'.
+    if @skill.save!
+puts "skill saved"
+      redirect_to user_path(current_user), notice: 'Congrats! Succesfully created skill👏'
 
     else
+      puts @skill.errors.full_messages
       render :new
     end
   end
