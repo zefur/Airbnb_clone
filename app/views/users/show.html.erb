@@ -101,17 +101,17 @@
       </div>
 
       <div class="booking-content">
-        <% @user.skills.limit(1).each do |skill| %>
+        <% @user.bookings.limit(1).each do |booking| %>
         <div class="booking-skill">
-          <p><%= skill.name %></p>
+          <p><%= booking.skill.name %></p>
         </div>
 
         <div class="booking-name">
-          <p><%= skill.name %></p>
+          <p><%= booking.skill.user.name %></p>
         </div>
 
         <div class="booking-date">
-          <p>25/11/2020</p>
+          <p><%= booking.date %></p>
         </div>
       </div>
     <% end %>
