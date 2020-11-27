@@ -70,6 +70,13 @@
             </div>
           </div>
         </div>
+        <div>
+              <%= f.label :tag %>
+            </div>
+            <div>
+              <%= f.collection_select(:tag_list, Tag.all :id, :name,class: "selectpicker") %>
+            </div>
+          </div>
 
       </div>
 
