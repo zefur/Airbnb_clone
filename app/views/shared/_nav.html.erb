@@ -4,9 +4,9 @@
     <div class="collapse navbar-collapse">
       <nav class= "nav nav-masthead justify-content-between" style="text-decoration: none">
       <% if !current_user.nil? %>
-          <%=  link_to "Profile", edit_user_path(current_user), class: "nav-link"  %>
+          <%=  link_to "Profile", user_path(current_user), class: "nav-link"  %>
           <% end %>
-          
+
           <%= link_to "Categories", root_path, class: "nav-link" %>
           <%= loginBar "nav-link" %>
      </nav>
