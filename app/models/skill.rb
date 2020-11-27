@@ -10,7 +10,7 @@ class Skill < ApplicationRecord
   validates :skill_type, inclusion: {in: %w[Driving DIY Coding Chores Teaching Gardening Craftwork "Pet care" "Baby care" Art]}
   belongs_to :user
   has_many :bookings
-
+  has_one_attached :avatar
   has_many_attached :works
 
   #acts_as_taggable_on :skill_types
