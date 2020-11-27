@@ -29,7 +29,7 @@
   </div>
 
   <div class= 'col-9' style='height: 100vh'>
-    <div style="padding-top: 40px; border-bottom: 1px solid black; height: 50vh" >
+    <div style="padding-top: 40px;  height: 50vh" >
       <%= form_for @user do |f| %>
 
           <div class="form-row">
@@ -108,86 +108,10 @@
       <% end %>
     </div>
 </div>
+<div style="margin-top: 15px">
+<%= render 'shared/edit_profile' %>
+</div>
 
-
-<div class= 'col' style='height: 50vh '>
-
-  <%= form_for(@user) do |f| %>
-
-
-  <div class="form-actions-return">
-
-    <%#= link_to 'Back', skills_path %>
-
-  </div>
-      <div class="form-inputs">
-        <div class="row">
-
-          <div class="col-6 a">
-            <div>
-              <div>
-                <%= f.label :name %>
-              </div>
-              <div>
-                <%= f.text_field :name %>
-              </div>
-            </div>
-
-            <div>
-              <div>
-                <%= f.label :background %>
-              </div>
-              <div>
-                <%= f.text_area :background %>
-              </div>
-            </div>
-          </div>
-
-
-        <div class="col-6 b">
-          <div>
-            <div>
-                <%= f.label :name %>
-              </div>
-              <div>
-                <%= f.text_field :name %>
-              </div>
-          </div>
-          <div>
-            <div>
-                <%= f.label :name %>
-              </div>
-              <div>
-                <%= f.text_field :name %>
-              </div>
-          </div>
-          <div>
-            <div>
-                <%= f.label :name %>
-              </div>
-              <div>
-                <%= f.text_field :name %>
-              </div>
-          </div>
-          <div>
-            <div>
-              <%= f.label :photo %>
-            </div>
-            <div>
-              <%= f.file_field :photo %>
-            </div>
-          </div>
-        </div>
-
-      </div>
-
-    <div class="form-actions">
-      <%= f.button :submit, :class => "form-button"%>
-      <%= f.submit :submit, :class => "form-button"%>
-    </div>
-  </div>
-
-  <% end %>
   </div>
 </div></div>
 </div>
