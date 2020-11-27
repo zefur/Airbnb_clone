@@ -31,7 +31,7 @@
         <div class="cards-display">
 
           <!--Start one card-->
-        <% @skills.limit(8).each do |skill|%>
+        <% @skills.last(8).each do |skill|%>
           <div class="one-card">
             <div class="one-card-left">
               <div class="thumbnail">

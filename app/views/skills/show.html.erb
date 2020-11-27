@@ -91,12 +91,7 @@
     <!-- showcase-container starts-->
     <div class="showcase-container">
         <h2>Showcased work</h2>
-     <% if @skill.photos.attached? %>
-       <% @skill.photos.each do |a| %>
-       <%= cl_image_tag a.key, height:300, width:300 %> 
-         <%end%>
-        
-        <% end %>
+     
         
 
         <div class="image-holder">
