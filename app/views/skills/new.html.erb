@@ -74,7 +74,7 @@
               <%= f.label :tag %>
             </div>
             <div>
-              <%= f.collection_select(:tag_list, Tag.all :id, :name,class: "selectpicker") %>
+              <%= f.select(:tag_list, %w[Driving DIY Coding Chores Teaching Gardening Craftwork Pet\ care Baby\ care Art] ) %>
             </div>
           </div>
 

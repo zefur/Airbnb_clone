@@ -40,7 +40,7 @@ class SkillsController < ApplicationController
     authorize @skill
 
     if @skill.save
-      redirect_to @skill, notice: 'Whoop, whoop.Succesfully created skill👏'.
+      redirect_to skill_path(@skill), notice: 'Whoop, whoop.Succesfully created skill👏'.
     else
       render :new
     end
@@ -92,6 +92,6 @@ class SkillsController < ApplicationController
   end
 
   def skill_params
-    params.require(:skill).permit(:name, :description, :price, :skill_location, :tag_list, :remote)
+    params.require(:skill).permit(:name, :description, :price, :skill_location, :skill_type, :tag_list, :remote)
   end
 end
