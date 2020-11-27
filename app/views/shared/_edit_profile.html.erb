@@ -1,5 +1,5 @@
 
- 
+
 <%= form_with model: Skill.new do |f| %>
     <div class="form-inputs">
       <div class="row">
@@ -10,7 +10,7 @@
                 <%= f.label :name %>
               </div>
               <div>
-                <%= f.text_field :name %>
+                <%= f.text_field :name, class:"edit-form"  %>
               </div>
             </div>
 
@@ -19,7 +19,7 @@
                 <%= f.label :description %>
               </div>
               <div>
-                <%= f.text_area :description %>
+                <%= f.text_area :description, class:"edit-form"  %>
               </div>
             </div>
           </div>
@@ -28,10 +28,10 @@
         <div class="col-6 b">
           <div>
             <div>
-              <%= f.label :skill_location %>
+              <%= f.label :tag  %>
             </div>
             <div>
-              <%= f.text_field :skill_location %>
+              <%= f.select(:tag_list, %w[Driving DIY Coding Chores Teaching Gardening Craftwork Pet\ care Baby\ care Art] )  %>
             </div>
           </div>
           <div>
@@ -39,7 +39,7 @@
               <%= f.label :skill_location %>
             </div>
             <div>
-              <%= f.text_field :skill_location %>
+              <%= f.text_field :skill_location, class:"edit-form"  %>
             </div>
           </div>
           <div>
@@ -47,7 +47,7 @@
               <%= f.label :price %>
             </div>
             <div>
-              <%= f.text_field :price %>
+              <%= f.text_field :price, class:"edit-form"  %>
             </div>
           </div>
           <div>
