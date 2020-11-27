@@ -1,4 +1,86 @@
-<% @skills.each do |skill|%>
-<%= skill.name %>
+<%=render "shared/nav"  %>
 
-<% end %>
+
+<body>
+
+  <div class="page-wrapper">
+    <div class="skill-home-page row">
+
+      <!-- Start Column 1: Left for content -->
+      <div class="skill-home-page-collumn double-column">
+
+        <!--Start White Column -->
+       <div class="white-column">
+
+          <div class= "index-skills-back-button d-flex justify-content-center ">
+            <%= link_to "Back",root_path, class: "btn btn-lg btn-light"%>
+          </div>
+            <h2>Book your services</h2>
+        </div>
+
+        <!-- End White Column -->
+
+
+
+
+        <!--Start Cards Display-->
+        <div class="cards-display">
+
+          <!--Start one card-->
+        <% @skills.limit(8).each do |skill|%>
+          <div class="one-card">
+            <div class="one-card-left">
+              <div class="thumbnail">
+                <%= image_tag "https://images.unsplash.com/photo-1569913486515-b74bf7751574?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=670&q=80", class: "img", alt: "thumbnail" %>
+              </div>
+
+              <div>
+                <%= link_to "View", skill_path(skill), class: "skill-home-page-view-button" %>
+              </div>
+            </div>
+
+
+            <div class="one-card-content">
+              <!-- <div class="one-card-info"> -->
+              <h3><%= link_to skill.user.name, user_path(skill.user) %></h3>
+
+              <h2><%= skill.name %></h2>
+
+              <p><i class="fas fa-coins"></i> <%= skill.price %> RMB/hr</p>
+
+              <p><i class="fas fa-map-marker-alt"></i> <%= skill.skill_location %></p>
+
+            </div>
+            <!-- </div> -->
+
+          </div>
+
+          <% end %>
+
+          <!--End one card-->
+
+        </div>
+        <!--End Cards Display-->
+
+      </div>
+      <!--End Column 1: Left for content -->
+
+
+      <!--Start Column 2: Right for map-->
+      <div class="column">
+          <div id="map"
+          style="width: 100%; height: 600px;"
+          data-markers="<%= @markers.to_json %>"
+          data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+          </div>
+      </div>
+      <!--End Column 2: Right for map-->
+    </div>
+    <!--end of row class-->
+  </div>
+
+
+
+
+  <!--end of page-wrapper class-->
+</body>
