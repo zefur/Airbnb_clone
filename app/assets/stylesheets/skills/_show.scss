@@ -20,6 +20,7 @@ body {
   justify-content: left;
   margin-top: 0;
   padding: 30px;
+  background-color: rgb(206,216,200);
 }
 
 
@@ -51,6 +52,15 @@ body {
 
 }
 
+.info-box-description {
+  //border: 1px solid black;
+  text-align: left;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 200;
+  color: black;
+  padding-bottom: 10px;
+}
+
 
 
 #info-box-location {
@@ -72,22 +82,21 @@ body {
   //border: 1px solid black;
   display: flex;
   justify-content: space-around;
-  margin-top: 50px;
+  padding-top: 30px;
 }
 
 .service-box {
   //border: 1px solid black;
   margin: 10px;
   padding-right: 20px;
-
-}
-
-// SERVICE below
-
-.service-box > p{
   width: 500px;
-  height: 300px;
+  height: 400px;
 }
+
+//.service-box > p{
+  //border: 1px solid black;
+
+//}
 
 #service-name  > p{
   //border: 1px solid black;
@@ -95,13 +104,12 @@ body {
   color: black;
   font-size: 30px;
   border-bottom: 1px solid grey;
-
 }
 
 #service-category  > p{
   //border: 1px solid black;
   text-align: left;
-  color: black;
+  color: grey;
   font-weight: lighter;
   margin-top: 5px;
 }
@@ -110,7 +118,9 @@ body {
   //border: 1px solid black;
   text-align: left;
   color: black;
-  font-weight: light;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 200px;
+
 }
 
 #service-location  > p{
@@ -130,29 +140,62 @@ body {
 
 .service-book-button {
   //border: 1px solid black;
-  border-radius: 20px;
-  width: 100px;
-  height: 30px;
+  width: 20px;
+  height: 50px;
   background-color: #006A52;
-  justify-content: center;
   align-items: center;
-  padding: 0;
-}
-
-.service-book-button > p {
   color: white;
-  text-align: center;
-  //border: 1px solid black;
-
+  padding: 1px 20px;
+  border-radius: 20px;
+  margin-left: 0;
+  margin-bottom: 10px;
 }
 
-#book-button:hover {
-  background-color: yellow;
-  color: #898b8a;
+.service-book-button:link {
+  color: white;
+}
+
+.service-book-button:visited {
+  color: white;
+}
+
+.service-book-button:hover {
+  color: white;
+  text-decoration: none;
+}
+
+.service-book-button:active {
+  color: white;
 }
 
 
+.services-view-button {
+  color: rgba(0, 0, 0, 0.4);
+  padding: 1px 20px;;
+  border-radius: 20px;
+  width: 20px;
+  height: 30px;
+  margin-left: 0;
+  border: 1px solid rgba(0, 0, 0, 0.4);
+}
 
+
+.services-view-button:link {
+  color: rgba(0, 0, 0, 0.4);
+}
+
+.services-view-button:visited {
+  color: rgba(0, 0, 0, 0.4);
+}
+
+.services-view-button:hover {
+  color: rgba(0, 0, 0, 0.6);
+  text-decoration: none;
+}
+
+.services-view-button:active {
+  color: rgba(0, 0, 0, 0.4);
+}
 
 
 // SHOWCASE below
@@ -170,23 +213,11 @@ body {
 
 }
 
-.showcase-title {
-  //border: 1px solid black;
-  padding: 10px;
-  height: 10%;
+.showcase-container h2{
+  font-family: 'Quicksand', sans-serif;
   text-align: center;
-  border-radius: 20px 20px 0 0;
 }
 
-
-.showcase-info {
-  //border: 1px solid black;
-  display: flex;
-  justify-content: space-around;
-  padding: 10px;
-  height: 80%;
-  background-color: white;
-}
 
 .image-holder {
   //border: 1px solid black;

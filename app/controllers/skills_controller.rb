@@ -20,7 +20,7 @@ class SkillsController < ApplicationController
         lat: skill.latitude,
         lng: skill.longitude,
         infoWindow: render_to_string(partial: "info_window", locals: { skill: skill }),
-        image_url: helpers.asset_url('coding.jpg')
+        image_url: :CLOUDINARY_URL
       }
     end
 
