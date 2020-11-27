@@ -20,7 +20,7 @@ class SkillsController < ApplicationController
         lat: skill.latitude,
         lng: skill.longitude,
         infoWindow: render_to_string(partial: "info_window", locals: { skill: skill }),
-        image_url: helpers.asset_url('coding.jpg')
+        image_url: :CLOUDINARY_URL
       }
     end
 
@@ -40,7 +40,9 @@ class SkillsController < ApplicationController
     authorize @skill
 
     if @skill.save
-      redirect_to skill_path(@skill), notice: 'Whoop, whoop.Succesfully created skill👏'
+
+      redirect_to @skill, notice: 'Congrats! Succesfully created skill👏'.
+
     else
       render :new
     end

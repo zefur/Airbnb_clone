@@ -1,3 +1,8 @@
+<head>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&family=Quicksand:wght@300&display=swap" rel="stylesheet">
+</head>
+
+
 <!--navbar starts-->
 <%= render 'shared/nav' %>
 
@@ -9,19 +14,24 @@
 
 <div class= "row">
 
-  <div class='col-3 justify-content-center align-self-end' style="background-color: blue; height: 100vh">
-    <h3>User profile</h3>
+  <div class='col-3 justify-content-center align-self-end' style="height: 100vh">
+    <div class="profile-edit-page-title">
+      <h3>User profile</h3>
+    </div>
+    <div class="thumbnail" >
+    <%= image_tag "https://images.unsplash.com/photo-1569913486515-b74bf7751574?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=670&q=80", class: "profiles-img", alt: "avatar-round" %>
+    </div>
+    <%= link_to "+ Edit Photo", new_user_session_path, class: "edit-profile-page-button" %>
+    <%= link_to "Back", :back, class: "back-button-on-edit-page"%>
+    <div>
 
-    <%= image_tag "https://images.unsplash.com/photo-1569913486515-b74bf7751574?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=670&q=80", class: "thumbnail", alt: "avatar-round" %>
-
-    <%= link_to "+ Edit Photo", new_user_session_path %>
-
+    </div>
   </div>
-  
-  <div class= 'col-9' style='background-color: yellow; height: 100vh'>
-    <div style="border: black solid 3px; height: 50vh" >
+
+  <div class= 'col-9' style='height: 100vh'>
+    <div style="padding-top: 40px;  height: 50vh" >
       <%= form_for @user do |f| %>
-       
+
           <div class="form-row">
 
             <div class="col-6 a">
@@ -33,8 +43,8 @@
                 <%= f.text_field :name, class:"edit-form" %>
               </div>
             </div>
-              
-            
+
+
             <div>
               <div>
                 <%= f.label :contact %>
@@ -50,12 +60,18 @@
               <div>
                 <%= f.text_field :email, class:"edit-form" %>
               </div>
+              <div>
+                <%= f.label :background %>
+              </div>
+              <div>
+                <%= f.text_area :background, class:"edit-form text-area" %>
+              </div>
             </div>
             </div>
 
 
            <div class="col-6 ">
-           
+
             <div>
               <div>
                 <%= f.label :username %>
@@ -64,120 +80,43 @@
                 <%= f.text_field :username, class:"edit-form" %>
               </div>
             </div>
-              
+
             <div>
               <div>
                 <%= f.label :location %>
               </div>
               <div>
-                <%= f.text_field :location,class:"edit-form" %>
+                <%= f.text_field :location, class:"edit-form" %>
               </div>
             </div>
             <div class="col-6 a">
             <div>
               <div>
-                <%= f.label :avatar%>
+                <%= f.label :avatar, class:"choose-avatar-label"%>
               </div>
               <div>
-                <%= f.file_field :avatar, as: :file%>
+                <%= f.file_field :avatar, as: :file, class:"choose-avatar-input"%>
               </div>
             </div>
-              
+
 
             <div class="form-actions">
-              <%= f.button :submit %>
+              <%= f.button :submit, class:"submit-edit-form" %>
             </div>
             </div>
          </div>
       <% end %>
     </div>
 </div>
+<div style="margin-top: 15px">
+<%= render 'shared/edit_profile' %>
+</div>
 
-
-<div class= 'col' style='background-color: green; height: 50vh '>
-
-  <%= form_for(@user) do |f| %>
-
-
-  <div class="form-actions-return">
-
-    <%= link_to 'Back', skills_path %>
-
-  </div>
-      <div class="form-inputs">
-        <div class="row">
-
-          <div class="col-6 a">
-            <div>
-              <div>
-                <%= f.label :name %>
-              </div>
-              <div>
-                <%= f.text_field :name %>
-              </div>
-            </div>
-
-            <div>
-              <div>
-                <%= f.label :background %>
-              </div>
-              <div>
-                <%= f.text_area :background %>
-              </div>
-            </div>
-          </div>
-
-
-        <div class="col-6 b">
-          <div>
-            <div>
-                <%= f.label :name %>
-              </div>
-              <div>
-                <%= f.text_field :name %>
-              </div>
-          </div>
-          <div>
-            <div>
-                <%= f.label :name %>
-              </div>
-              <div>
-                <%= f.text_field :name %>
-              </div>
-          </div>
-          <div>
-            <div>
-                <%= f.label :name %>
-              </div>
-              <div>
-                <%= f.text_field :name %>
-              </div>
-          </div>
-          <div>
-            <div>
-              <%= f.label :photo %>
-            </div>
-            <div>
-              <%= f.file_field :photo %>
-            </div>
-          </div>
-        </div>
-
-      </div>
-
-    <div class="form-actions">
-      <%= f.button :submit, :class => "form-button"%>
-      <%= f.submit :submit, :class => "form-button"%>
-      <%= link_to "Back", :back, class: "btn btn-lg btn-light"%>
-    </div>
-  </div>
-
-  <% end %>
   </div>
 </div></div>
 </div>
 </div>
-  
+
 
 
 
