@@ -11,6 +11,7 @@ class SkillsController < ApplicationController
 #     @skills = params[:tag] ? Skill.filter(params[:tag]) : @skills = Skill.all
 
     @skills = Skill.all
+    
     @skills = policy_scope(Skill).order(created_at: :desc)
 
 
