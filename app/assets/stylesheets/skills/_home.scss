@@ -14,7 +14,7 @@
   flex-basis: 100%;
   flex: 1;
   height: 100vh;
-  background-color: white;
+  background-color: rgb(247,247,247);
 }
 
 .column {
@@ -30,28 +30,19 @@
 
 }
 
-.white-column {
-  //border: 1px solid black;
+.white-column .btn {
+  margin-right: auto;
 }
 
 
-.first-title h2 {
+.white-column > h2 {
   //border: 1px solid black;
   text-decoration: none;
   font-weight: bolder;
-  color: #F3F2F2;
-  margin-bottom: 0;
-}
-
-.second-title h2 {
-  //border: 1px solid black;
-  text-decoration: none;
-  font-weight: bolder;
-  color: #006A52;
+  color: lightgrey;
   margin-top: 0;
-  padding-left: 40%;
   font-family: 'Montserrat', sans-serif;
-
+  text-align: center;
 }
 
 
@@ -71,120 +62,85 @@
 
 // one card starts here//
 
-.card-product {
+.one-card {
   //border: 1px solid black;
-  height: 140px;
+  height: 200px;
   background: white;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  box-shadow: 0 0 5px rgba(0,0,0,0.2);
   display: flex;
-  width: 350px;
+  width: 400px;
   padding: 0;
   margin-top: 30px;
-  border-radius: 10px;
-}
-
-.avatar-large {
-  width: 100px;
-  border-radius: 50%;
-  margin-bottom: 10px;
-  padding-left: 5px;
-  padding-top: 5px;
-}
-
-.card-product-infos {
-  //border: 1px solid black;
-  width: 100%;
-  height: 100%;
-
-}
-
-.card-name {
-  //border: 1px solid black;
-  width: 100%;
-  text-align: center;
-  padding-top: 10px;
-}
-
-
-.card-skill {
-  //border: 1px solid black;
-  background: linear-gradient(to right, rgba(255,0,0,0), rgba(0,106,82, 0.4));
-  width: 100%;
-  text-align: center;
-  padding-top: 10px;
-  padding-bottom: 10px;
-}
-
-.card-location {
-  display: flex;
+  border-radius: 3px;
+  border: 1px solid rgb(247,247,247);
   justify-content: space-between;
-  padding: 3px 5px;
 }
 
-.remote {
-  padding-right: 5px;
-}
+.thumbnail {
+  width: 120px;
+  height: 120px;
+  overflow: hidden;
+  margin: 10px auto;
 
-.remote p{
-  //border: 1px solid black;
-  text-align: right;
-}
-
-.card-product h2 {
-  font-size: 20px;
-  font-weight: bold;
-  margin: 0;
-  color: black;
-}
-
-.card-product h3 {
-  font-size: 15px;
-  font-weight: bold;
-  margin: 0;
-  color: #006A52;
 }
 
 
-.card-product p {
-  font-size: 12px;
-  line-height: 1.4;
-  opacity: .7;
-  padding: 0;
+.thumbnail > img {
+    width: 120px;
+    height: 100%;
+    object-fit: cover;
 }
 
-.skill-home-page-book-button {
+.one-card-content {
+  //border: 1px solid red;
+  width: 60%;
+  height: 100%;
+  padding-top: 20px;
+}
+
+.one-card-left {
+  //border: 1px solid red;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  padding-top: 20px;
+}
+
+.one-card-content > h2 {
+  text-align: left;
+}
+
+.one-card-content > h3 {
+  text-align: left;
+  color: rgb(105, 129, 87);
+}
+
+.one-card-content > p {
+  text-align: left;
+  color: grey;
+}
+
+.skill-home-page-view-button {
   //border-radius: 20px;
-  width: 70px;
-  height: 20px;
-  margin-right: 5px;
-  box-shadow: 5px 5px 5px 0px rgba(0,0,0, 0.2);
-  background-color: white;
   text-align: center;
   border: 1px solid #006A52;
-  margin-left: 10px;
-  padding-bottom: 0;
-  border-radius: 20px;
+  border-radius: 10px;
+  padding: 5px 10px;
+  color:: #006A52;
+  background-color: white;
 }
 
-// .card-location .location p{
-//   text-align: right;
-// }
-
-.card-location .price p{
-  text-align: right;
-}
-
-.skill-home-page-book-button p {
+.skill-home-page-view-button:hover {
   color: #006A52;
   font-weight: 200;
-  font-family: 'Montserrat', sans-serif;
+  text-decoration: none;
 }
 
 // one card starts here//
 
 // card display section ends here//
 
-.map-column p {
+.map-column > p {
   font-weight: 200;
   font-family: 'Montserrat', sans-serif;
 }
@@ -194,7 +150,9 @@
   .btn{
   padding: 10px 25px;
   border: solid 2px #006A52;
+  align-self: left;
   }
+
   .btn:hover{
   background-color:yellow;
   color:  #898b8a;
