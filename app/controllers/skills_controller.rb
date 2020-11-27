@@ -52,7 +52,7 @@ puts "skill saved"
 
   #GET /skills/:id
   def show
-    @user = @skill.user
+    
   end
 
 
