@@ -1,12 +1,13 @@
 class UsersController < ApplicationController
 
-  before_action :set_user, only: [:show, :edit, :update]
+  before_action :set_user, only: [ :edit, :update]
   def index
     @users = policy_scope(User).order(create_at: :desc)
   end
 
   def show
-    # @user = User.find(params[:id])
+     @user = User.find(params[:id])
+     authorize @user
   end
 
   def create
